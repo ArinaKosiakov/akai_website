@@ -1,2 +1,2 @@
 # akai_website
-The second version of a personal website. 
+The second version of me personal website. 
