@@ -1,4 +1,10 @@
 import './globals.css'
+import './components/navbar'
+import Navbar from './components/navbar'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='flex justify-center bg-gray-background'>
+        <div className=' w-11/12 h-full bg-red'>
+
+          <div className=' sticky'><Navbar></Navbar></div>
+          <div className='w-full h-100 bg-white'>
+            {children}
+          </div>
+
+        </div>
+
+
+      </body>
     </html>
   )
 }
