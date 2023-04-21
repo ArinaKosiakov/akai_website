@@ -18,17 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex justify-center bg-gray-background'>
-        <div className=' w-11/12 h-full bg-red'>
+      <body className='flex justify-center bg-gray-background overflow-hidden font-pfd font-normal'>
+        <div className='w-11/12 h-screen bg-red '>
 
-          <div className=' sticky'><Navbar></Navbar></div>
-          <div className='w-full h-100 bg-white'>
+          <div className=' sticky mb-4'><Navbar></Navbar></div>
+          <div className='w-full h-5/6 bg-white'>
             {children}
+          </div>
+          <div>
+            <footer className=' text-center mt-5 mb-3 pb-3 text-gray-light'>Copyright &copy; 2023 Akaiko</footer>
           </div>
 
         </div>
-
-
       </body>
     </html>
   )

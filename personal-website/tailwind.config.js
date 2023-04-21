@@ -10,7 +10,7 @@ module.exports = {
 
     fontFamily: {
       'pfd': ['Playfair Display', 'serif'],
-      'pfd': ['Karla', 'sans']
+      'karla': ['Karla', 'sans']
     },
 
     colors: {
@@ -24,5 +24,5 @@ module.exports = {
       'akai-red-dark': '#6E2929'
     }
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }
