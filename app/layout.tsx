@@ -1,6 +1,8 @@
 import './globals.css'
 import './components/navbar'
 import Navbar from './components/navbar'
+import Footer from './components/footer'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -19,17 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='flex justify-center bg-gray-background overflow-hidden font-pfd font-normal'>
-        <div className='w-11/12 h-screen bg-red '>
+        <div className='w-11/12 h-screen z-0 '>
 
-          <div className=' sticky mb-4'><Navbar></Navbar></div>
+          <div className='sticky mb-4'><Navbar></Navbar></div>
+
           <div className='w-full h-5/6 bg-white'>
             {children}
           </div>
-          <div>
-            <footer className=' text-center mt-5 mb-3 pb-3 text-gray-light'>Copyright &copy; 2023 Akaiko</footer>
-          </div>
+
 
         </div>
+        <div className='z-30 fixed bottom-0 w-full bg-gray-background'><Footer></Footer></div>
+
       </body>
     </html>
   )

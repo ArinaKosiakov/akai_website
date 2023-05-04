@@ -8,17 +8,17 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 const COLORS = {
-    grayDark: '#0F0F0F',
-    grayBackground: '#343536',
-    grayLight: '#5D5E5F',
-    akaiRed: '#FA5C5C',
+  grayDark: '#0F0F0F',
+  grayBackground: '#343536',
+  grayLight: '#5D5E5F',
+  akaiRed: '#FA5C5C',
 };
 
 const MenuLabel = styled.label`
 background-color: ${'grayBackground'};
 cursor: pointer;
-margin-top: 2rem;
-margin-left:2rem
+margin-top: 1.5rem;
+margin-left:1.5rem
 `;
 
 const Icon = styled.div`
@@ -52,35 +52,39 @@ position: relative;
 const List = styled.ul`
     width: ${(props) => (props.clicked ? "100%" : "0")};
     opacity: ${(props) => (props.clicked ? "1" : "0")};
-    
+    overflow: hidden;
     transition: width 0.8s, opacity 0.8s;
 `;
+
+const Li = styled.li`
+min-width: max-content;
+`
 
 
 function Menu() {
 
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
-    return (
-        <>
-            <div className='flex flex-row justify-center items-center'>
-                <List className='flex flex-row items-center justify-between text-2xl text-white text-opacity-75' clicked={click}>
-                    <li className='hover:text-akai-red mr-5'><Link href={'/about'}>About me</Link></li>
-                    <li className='hover:text-akai-red mr-5'><Link href={'/portfolio'}>Portfolio</Link></li>
-                    <li className='hover:text-akai-red mr-5'><Link href={'/twitch'}>Twitch</Link></li>
-                    <li className='hover:text-akai-red'><Link href={'/contacts'}>Contacts</Link></li>
-                </List>
+  return (
+    <>
+      <div className='flex flex-row justify-center items-center'>
+        <List className='flex flex-row items-center justify-between text-sm md:text-xl lg:text-2xl text-white text-opacity-75' clicked={click}>
+          <Li className='hover:text-akai-red mr-5'><Link href={'/about'}>About me</Link></Li>
+          <Li className='hover:text-akai-red mr-5'><Link href={'/portfolio'}>Portfolio</Link></Li>
+          <Li className='hover:text-akai-red mr-5'><Link href={'/twitch'}>Twitch</Link></Li>
+          <Li className='hover:text-akai-red'><Link href={'/contacts'}>Contacts</Link></Li>
+        </List>
 
-                <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
-                    <Icon clicked={click}> &nbsp;</Icon>
-                </MenuLabel>
-            </div>
+        <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
+          <Icon clicked={click}> &nbsp;</Icon>
+        </MenuLabel>
+      </div>
 
 
 
-        </>
-    )
+    </>
+  )
 }
 
 export default Menu

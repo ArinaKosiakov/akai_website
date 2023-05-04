@@ -29,6 +29,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/styled-components": "^5.1.26"
   }
 }
