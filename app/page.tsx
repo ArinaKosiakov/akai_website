@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className='h-full w-full flex flex-col item-center overflow-y-scroll scrollbar-hide md:w-1/2'>
 
-        <div className=' z-40 w-full h-fit mb-28 p-16  font-karla text-2xl bg-gray-dark bg-opacity-40 md:mt-40'>
+        <div className=' z-40 w-full h-fit mb-28 p-16  font-karla text-2xl bg-gray-dark bg-opacity-40 md:mt-10'>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/about'}>About me</Link> </h1>
           <p>
             Hello, I’m Akai an <span className=' text-akai-red'>engineering student</span> , <span className=' text-akai-red'>content creator</span>  and <span className=' text-akai-red'>artist</span> . Sometimes I’m a web developer and other times a musician. I have many different hobbies and interests and I
@@ -27,7 +27,7 @@ export default function Home() {
         <div className=' z-40 w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/portfolio'}>Portfolio</Link> </h1>
           <p>
-            I’ve been drawing since I was 10, but I started to focus on my art around two years ago. Here you can find some of my best illustrations, projects and work at a glance.
+            I’ve been drawing since I was 10, but I started to focus on my art around two years ago. Here you can find some of my best illustrations, projects and work at a glance. You can have more info about commissions <span className=' text-akai-red'>here</span>.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Home() {
         <div className='z-40 w-full h-fit p-16 mb-4 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/contacts'}>Contacts</Link> </h1>
           <p>
-            On this page you'll find my main contacts. If you want to collaborate on any art or web projects you contact me on one of my socials, or email.
+            If you want to collaborate on any art or web projects you can contact me on one of my socials, or email.
           </p>
         </div>
 

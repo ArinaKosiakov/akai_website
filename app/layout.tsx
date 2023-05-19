@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='flex justify-center bg-gray-background overflow-hidden font-pfd font-normal'>
-        <div className='w-11/12 h-screen z-0 '>
+        <div className='w-5/6 md:w-11/12 h-screen z-0 '>
 
           <div className='sticky mb-4'><Navbar></Navbar></div>
 
