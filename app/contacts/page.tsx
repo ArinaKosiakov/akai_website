@@ -31,7 +31,7 @@ export default function Contacts() {
 
             </div>
             <div className='h-full w-1/2  relative'>
-                <Image src={akai} className=' absolute bottom-8 right-14 scale-125'></Image>
+                <Image alt='logo' src={akai} className=' absolute bottom-8 right-14 scale-125'></Image>
             </div>
         </div>
     )

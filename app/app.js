@@ -1,18 +1,25 @@
-function changeOpacityOnScroll(elementId, opacity) {
-    const element = document.getElementById(elementId);
+function adjustOpacity() {
+    var div = document.getElementById("scroll-div");
+    var divHeight = div.offsetHeight;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    window.addEventListener('scroll', function () {
-        // Calculate the opacity based on the scroll position
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const elementOffset = element.offsetTop;
-        const distanceFromTop = elementOffset - scrollPosition;
+    // Calculate the position of the middle of the div
+    var divTop = div.offsetTop + divHeight / 2;
 
-        if (distanceFromTop < windowHeight) {
-            const calculatedOpacity = 1 - (distanceFromTop / windowHeight) * (1 - opacity);
-            element.style.opacity = calculatedOpacity;
-        } else {
-            element.style.opacity = 0;
-        }
-    });
+    // Calculate the distance from the middle of the div to the top and bottom
+    var distanceToTop = divTop - scrollTop;
+    var distanceToBottom = scrollTop + window.innerHeight - divTop;
+
+    // Calculate the opacity based on the distance from the middle
+    var opacity = 0.1;
+
+    if (distanceToTop > 0 && distanceToBottom > 0) {
+        opacity = 1 - Math.min(distanceToTop, distanceToBottom) / (divHeight / 2);
+    }
+
+    // Apply the opacity to the content inside the div
+    div.style.opacity = opacity;
 }
+
+// Attach the function to the scroll event
+window.addEventListener("scroll", adjustOpacity);

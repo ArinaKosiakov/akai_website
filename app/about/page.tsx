@@ -28,7 +28,7 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className='h-full md:w-1/2  relative'>
-                <Image src={akai} className=' absolute bottom-8 right-14 scale-125'></Image>
+                <Image src={akai} alt='logo' className=' absolute bottom-8 right-14 scale-125'></Image>
             </div>
 
         </div>
