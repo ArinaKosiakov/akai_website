@@ -20,7 +20,7 @@ export default function Home() {
             love to share them with other people. </p>
           <hr className='h-1 my-2 opacity-0' />
           <p>
-            My biggest dream is to work in the game industry. In order to achieve this dream I&apos;m currently am very focused on improving my coding and art skills.
+            My biggest dream is to work in the game industry. In order to achieve this dream I&apos;m currently very focused on improving my coding and art skills.
           </p>
         </div>
 
@@ -34,8 +34,8 @@ export default function Home() {
         <div className=' z-40 w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/twitch'}>Twitch</Link> </h1>
           <p>
-            Two years ago I started my career as a streamer and I couldn&apos;t be happier. It is an immense pleasure to have people who share my interests and like what I'm doing. My first priority is to make
-            people feel less alone and make them smile. I hope my community is going to grow and I'll meet more and more nice people.
+            Two years ago I started my career as a streamer and I couldn&apos;t be happier. It is an immense pleasure to have people who share my interests and like what I&apos;m doing. My first priority is to make
+            people feel less alone and make them smile. I hope my community is going to grow and I&apos;ll meet more and more nice people.
           </p>
         </div>
 
