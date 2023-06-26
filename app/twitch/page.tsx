@@ -12,7 +12,7 @@ export default function Twitch() {
                 <div className=' w-full h-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-20'>
                     <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'https://www.twitch.tv/ak_aiko'}>Twitch</Link> </h1>
 
-                    <p>I’ve been streaming for the past two years and I got to know a lot of amazing people. I am a <span className=' text-akai-red'>variety streamer </span>
+                    <p>I&apos;ve been streaming for the past two years and I got to know a lot of amazing people. I am a <span className=' text-akai-red'>variety streamer </span>
                         which means I bring different content. I usually stream <span className=' text-akai-red'>video-games</span>, but sometimes I like to share also how I create my <span className=' text-akai-red'>art</span>.</p>
                     <hr className='h-1 my-2 opacity-0' />
                 </div>

@@ -12,11 +12,11 @@ export default function AboutMe() {
                 <div className=' w-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-20'>
                     <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> About me </h1>
 
-                    <p>Hello, I’m <span className=' text-akai-red'>Akai</span> .</p>
+                    <p>Hello, I&apos;m <span className=' text-akai-red'>Akai</span> .</p>
                     <hr className='h-1 my-2 opacity-0' />
                     <p><span className=' text-akai-red'>Akai</span> means red in japanese and for me Akai means being passionate, loving and energetic.</p>
                     <hr className='h-1 my-2 opacity-0' />
-                    <p>I’ve been into science since I was little and currently I’m studying Computer science at the University. My biggest dream is to work in the <span className=' text-akai-red'>game industry</span> and I
+                    <p>I&apos;ve been into science since I was little and currently I&apos;m studying Computer science at the University. My biggest dream is to work in the <span className=' text-akai-red'>game industry</span> and I
                         try to improve my programming skills in order to achieve this dream.</p>
                     <hr className='h-1 my-2 opacity-0' />
                     <p>I have different hobbies. I consider myself an <span className=' text-akai-red'>artist</span>,
