@@ -12,7 +12,7 @@ export default function Contacts() {
                 <div className=' w-full h-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-20'>
                     <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> Contacts </h1>
 
-                    <p className='text-md'>If you are interested in what I&apos; m doing you an follow my socials and don&apos;t foget to join my discord channe!</p>
+                    <p className='text-md'>If you are interested in what I&apos; m doing you an follow my socials and don&apos;t foget to join my discord channel!</p>
                     <br />
                     <div className=' w-full text-center'><p> <span className=' text-akai-red'>Art </span></p>
                         <p> <span className=' text-akai-red'>Twitch </span></p>
