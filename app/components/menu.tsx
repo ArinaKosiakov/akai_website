@@ -21,37 +21,36 @@ margin-top: 1.5rem;
 margin-left:1.5rem
 `;
 
-const Icon = styled.div`
-position: relative;
-  background-color: ${(props) => (props.clicked ? "transparent" : "#5D5E5F")};
-  width: 2rem;
-  height: 3px;
-  display: inline-block;
-  transition: all 0.3s;
-  &::before,
-  &::after {
-    content: "";
-    background-color: #5D5E5F;
-    width: 2rem;
-    height: 3px;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s;
-  }
-  &::before {
-    top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
-    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
-  }
-  &::after {
-    top: ${(props) => (props.clicked ? "0" : "0.8rem")};
-    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
-  }
-`;
+// const Icon = styled.div`
+// position: relative;
+//   background-color: ${(props) => (props.clicked ? "transparent" : "#5D5E5F")};
+//   width: 2rem;
+//   height: 3px;
+//   display: inline-block;
+//   transition: all 0.3s;
+//   &::before,
+//   &::after {
+//     content: "";
+//     background-color: #5D5E5F;
+//     width: 2rem;
+//     height: 3px;
+//     display: inline-block;
+//     position: absolute;
+//     left: 0;
+//     transition: all 0.3s;
+//   }
+//   &::before {
+//     top: ${(props) => (props.clicked ? "0" : "-0.8rem")};
+//     transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+//   }
+//   &::after {
+//     top: ${(props) => (props.clicked ? "0" : "0.8rem")};
+//     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+//   }
+// `;
 
 const List = styled.ul`
-    width: ${(props) => (props.clicked ? "100%" : "0")};
-    opacity: ${(props) => (props.clicked ? "1" : "0")};
+    
     overflow: hidden;
     transition: width 0.8s, opacity 0.8s;
 `;
@@ -69,7 +68,7 @@ function Menu() {
   return (
     <>
       <div className='flex flex-row justify-center items-center'>
-        <List className='flex flex-row items-center justify-between text-sm md:text-xl lg:text-2xl text-white text-opacity-75' clicked={click}>
+        <List className='flex flex-row items-center justify-between text-sm md:text-xl lg:text-2xl text-white text-opacity-75' >
           <Li className='hover:text-akai-red mr-5'><Link href={'/about'}>About me</Link></Li>
           <Li className='hover:text-akai-red mr-5'><Link href={'/portfolio'}>Portfolio</Link></Li>
           <Li className='hover:text-akai-red mr-5'><Link href={'/twitch'}>Twitch</Link></Li>
@@ -77,7 +76,7 @@ function Menu() {
         </List>
 
         <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
-          <Icon clicked={click}> &nbsp;</Icon>
+          {/* <Icon clicked={click}> &nbsp;</Icon> */}
         </MenuLabel>
       </div>
 
