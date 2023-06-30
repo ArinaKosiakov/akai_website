@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
-      <div className='h-full w-full flex flex-col item-center overflow-y-scroll scrollbar-hide md:w-1/2' id='scroll-div'>
+      <div className='h-full w-full md:z-10  flex flex-col item-center overflow-y-scroll scrollbar-hide md:w-1/2'>
 
-        <div className=' z-40 w-full h-fit mb-28 p-16  font-karla text-2xl bg-gray-dark bg-opacity-40 md:mt-10'>
+        <div className='  w-full h-fit mb-28 p-16  font-karla text-2xl bg-gray-dark bg-opacity-80 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/about'}>About me</Link> </h1>
           <p>
             Hello, I&apos;m Akai an <span className=' text-akai-red'>engineering student</span> , <span className=' text-akai-red'>content creator</span>  and <span className=' text-akai-red'>artist</span> . Sometimes I&apos;m a web developer and other times a musician. I have many different hobbies and interests and I
@@ -21,14 +21,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className=' z-40 w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
+        <div className=' w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-80 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/portfolio'}>Portfolio</Link> </h1>
           <p>
             I&apos;ve been drawing since I was 10, but I started to focus on my art around two years ago. Here you can find some of my best illustrations, projects and work at a glance. You can have more info about commissions <span className=' text-akai-red'>here</span>.
           </p>
         </div>
 
-        <div className=' z-40 w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
+        <div className='  w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-80 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/twitch'}>Twitch</Link> </h1>
           <p>
             Two years ago I started my career as a streamer and I couldn&apos;t be happier. It is an immense pleasure to have people who share my interests and like what I&apos;m doing. My first priority is to make
@@ -36,7 +36,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className='z-40 w-full h-fit p-16 mb-4 font-karla text-2xl bg-gray-dark bg-opacity-40 '>
+        <div className=' w-full h-fit p-16 mb-4 font-karla text-2xl bg-gray-dark bg-opacity-80 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/contacts'}>Contacts</Link> </h1>
           <p>
             If you want to collaborate on any art or web projects you can contact me on one of my socials, or email.
@@ -46,8 +46,8 @@ export default function Home() {
       </div>
 
 
-      <div className='h-full relative md:w-1/2'>
-        <Image alt='logo' src={akai} className=' z-0 absolute bottom-8 right-14 scale-125'></Image>
+      <div className='h-full relative md:w-1/2 -z-1'>
+        <Image alt='logo' src={akai} className=' absolute bottom-10 right-14 scale-125'></Image>
       </div>
 
     </main>

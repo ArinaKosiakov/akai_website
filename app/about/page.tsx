@@ -9,7 +9,7 @@ export default function AboutMe() {
 
             <div className='h-full md:w-1/2 flex flex-col item-center overflow-y-scroll scrollbar-hide'>
 
-                <div className=' w-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-20'>
+                <div className=' w-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-80'>
                     <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> About me </h1>
 
                     <p>Hello, I&apos;m <span className=' text-akai-red'>Akai</span> .</p>
@@ -27,7 +27,7 @@ export default function AboutMe() {
                     <p> <Link href={'https://github.com/akaik0'} > <span className=' text-akai-red'>Here</span></Link> you can find some of my technical projects. </p>
                 </div>
             </div>
-            <div className='h-full md:w-1/2  relative'>
+            <div className='h-full z-0 md:w-1/2  relative'>
                 <Image src={akai} alt='logo' className=' absolute bottom-8 right-14 scale-125'></Image>
             </div>
 

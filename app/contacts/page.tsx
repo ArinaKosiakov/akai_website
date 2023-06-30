@@ -7,9 +7,9 @@ export default function Contacts() {
     return (
         <div className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
-            <div className='h-full w-1/2 flex flex-col item-center overflow-y-scroll scrollbar-hide'>
+            <div className='h-full z-10 w-1/2 flex flex-col item-center overflow-y-scroll scrollbar-hide'>
 
-                <div className=' w-full h-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-20'>
+                <div className=' w-full h-full p-16 font-karla text-2xl bg-gray-dark bg-opacity-80'>
                     <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> Contacts </h1>
 
                     <p className='text-md'>If you are interested in what I&apos;m doing you an follow my socials and don&apos;t foget to join my discord channel!</p>
@@ -23,14 +23,10 @@ export default function Contacts() {
                     <hr className='h-1 my-2 opacity-0' />
                     <p>If you like what I do and want to help me grow or just support you can do it here:</p>
                     <hr className='h-1 my-2 opacity-0' />
-
-
-
                 </div>
-
-
             </div>
-            <div className='h-full w-1/2  relative'>
+
+            <div className='h-full z-0 w-1/2  relative'>
                 <Image alt='logo' src={akai} className=' absolute bottom-8 right-14 scale-125'></Image>
             </div>
         </div>
