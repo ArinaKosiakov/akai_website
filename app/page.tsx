@@ -24,7 +24,8 @@ export default function Home() {
         <div className=' w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-80 '>
           <h1 className=' text-5xl font-pfd mb-10 hover:text-akai-red'> <Link href={'/portfolio'}>Portfolio</Link> </h1>
           <p>
-            I&apos;ve been drawing since I was 10, but I started to focus on my art around two years ago. Here you can find some of my best illustrations, projects and work at a glance. You can have more info about commissions <span className=' text-akai-red'>here</span>.
+            I&apos;ve been drawing since I was 10, but I started to focus on my art around two years ago. Here you can find some of my best illustrations, projects and work at a glance. If you are interested to collaborate or you would like ne to work on your commission contact me
+            through the email you will find in the <span className=' text-akai-red'> <Link href={'/contacts'}>contacts</Link> </span>.
           </p>
         </div>
 

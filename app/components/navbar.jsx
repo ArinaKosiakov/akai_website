@@ -8,19 +8,20 @@ import logo from '../../public/logo-gray.png'
 const XsMenu = () => {
 
     let Links = [
-        { name: "About me", link: "/" },
+        { name: "About me", link: "/about" },
         { name: "Portfolio", link: "/portfolio" },
         { name: "Twitch", link: "/twitch" },
         { name: "Contacts", link: "/contacts" },
     ];
     let [open, setOpen] = useState(false);
+
     return (
         <div className='shadow-md w-full'>
             <div className=' md:flex items-center justify-between bg-background py-4 md:px-10 px-7'>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-pfd
         text-white text-opacity-75'>
                     <span className='text-3xl text-indigo-600 mr-1 pt-2'>
-                        <Image src={logo} width={70} alt='logo' className='md:md:w-100 lg:w-100'></Image>
+                        <Link href={"/"}> <Image src={logo} width={70} alt='logo' className='md:md:w-100 lg:w-100'></Image></Link >
                     </span>
                 </div>
 
