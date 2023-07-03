@@ -1,9 +1,15 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import akai from '../../public/akai-lg.svg'
 
-export default function Contacts() {
+function Contacts() {
+
+    useEffect(() => {
+        document.title = 'Akaiko - Contacts';
+    });
+
     return (
         <div className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
@@ -32,3 +38,5 @@ export default function Contacts() {
         </div>
     )
 }
+
+export default Contacts

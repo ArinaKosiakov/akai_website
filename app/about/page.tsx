@@ -1,9 +1,13 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import akai from '../../public/akai-lg.svg'
 
-export default function AboutMe() {
+function AboutMe() {
+    useEffect(() => {
+        document.title = 'Akaiko - About me';
+    });
     return (
         <div className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
@@ -35,3 +39,4 @@ export default function AboutMe() {
 
     )
 }
+export default AboutMe

@@ -1,9 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import akai from '../../public/akai-lg.svg'
 import Link from 'next/link'
 
-export default function Twitch() {
+function Twitch() {
+    useEffect(() => {
+        document.title = 'Akaiko - Twitch';
+    });
+
     return (
         <div className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
@@ -29,3 +34,4 @@ export default function Twitch() {
         </div>
     )
 }
+export default Twitch

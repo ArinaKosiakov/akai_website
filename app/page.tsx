@@ -1,10 +1,17 @@
+'use client'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import akai from '../public/akai-lg.svg'
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 
-export default function Home() {
+function Home() {
+
+  useEffect(() => {
+    document.title = 'Akaiko - Homepage';
+  });
+
   return (
     <main className="page h-full flex flex-row justify-between text-white bg-gray-background">
 
@@ -55,3 +62,4 @@ export default function Home() {
   );
 }
 
+export default Home

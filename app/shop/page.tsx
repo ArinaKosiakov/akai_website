@@ -1,7 +1,12 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 
-export default function Shop() {
+function Shop() {
+    useEffect(() => {
+        document.title = 'Akaiko - Shop';
+    });
     return (
         <div>Shop</div>
     )
 }
+export default Shop
