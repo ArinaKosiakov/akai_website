@@ -12,7 +12,7 @@ function Contacts() {
   return (
     <div className="h-full font-karla text-white text-xl bg-gray-background">
       <div className="grid grid-cols-1 overflow-y-scroll scrollbar-hide md:grid-cols-2 md:grid-rows-hero h-full ">
-        <div className="flex flex-col pb-6 pt-16 px-10 md:col-start-1 md:col-end-2 md:text-2xl bg-gray-dark bg-opacity-80">
+        <div className="flex flex-col pb-6 pt-10 px-10 md:col-start-1 md:col-end-2 md:text-2xl bg-gray-dark bg-opacity-80">
           <h1 className="text-5xl font-pfd mb-10 pt-6 hover:text-akai-red">
             Contacts
           </h1>
@@ -43,7 +43,7 @@ function Contacts() {
             If you like what I do and want to build something together
             don&apos;t hesitate to contact me!
           </p>
-          <div className="cursor-pointer hover:animate-bounce hover:underline hover:text-akai-red mt-8 text-3xl">
+          <div className="cursor-pointer mt-8 xs:2xl sm:text-3xl hover:animate-bounce hover:underline hover:text-akai-red  ">
             <a href="mailto:kosiakov.arina@gmail.com">
               kosiakov.arina@gmail.com
             </a>
