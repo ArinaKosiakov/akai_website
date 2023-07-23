@@ -55,7 +55,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="pb-3 pt-16 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
+        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
           </h1>
@@ -81,7 +81,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="pb-3 pt-16 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
+        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/contacts"}>Contacts</Link>
           </h1>
