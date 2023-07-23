@@ -22,6 +22,7 @@ module.exports = {
       black: "#000000",
       "gray-dark": "#0F0F0F",
       "gray-background": "#343536",
+      "gray-navbar": "#3c3e3f",
       "gray-light": "#5D5E5F",
       "akai-red": "#FA5C5C",
       "akai-red-medium": "#AD4040",

@@ -11,20 +11,20 @@ function Home() {
   });
 
   return (
-    <main className="page h-full flex flex-row justify-between text-white bg-gray-background">
-      <div className="h-full w-full md:z-10  flex flex-col item-center overflow-y-scroll scrollbar-hide md:w-1/2">
-        <div className="  w-full h-fit mb-28 p-16  font-karla text-2xl bg-gray-dark bg-opacity-80 ">
-          <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
-            {" "}
-            <Link href={"/about"}>About me</Link>{" "}
+    <main className="page h-full flex flex-row justify-between text-white text-xl bg-gray-background">
+      <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
+        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-10 px-10 md:col-start-1 md:col-end-2  md:text-2xl ">
+          <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
+            <Link href={"/about"}>About me</Link>
           </h1>
+
           <p>
-            Hello, I&apos;m Akai an{" "}
-            <span className=" text-akai-red">engineering student</span> ,{" "}
-            <span className=" text-akai-red">content creator</span> and{" "}
-            <span className=" text-akai-red">artist</span> . Sometimes I&apos;m
+            Hello, I&apos;m Akai an
+            <span className=" text-akai-red"> engineering student</span>,
+            <span className=" text-akai-red"> content creator</span> and
+            <span className=" text-akai-red"> artist</span>. Sometimes I&apos;m
             a web developer and other times a musician. I have many different
-            hobbies and interests and I love to share them with other people.{" "}
+            hobbies and interests and I love to share them with other people.
           </p>
           <hr className="h-1 my-2 opacity-0" />
           <p>
@@ -34,56 +34,70 @@ function Home() {
           </p>
         </div>
 
-        <div className=" w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-80 ">
+        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
-            {" "}
-            <Link href={"/portfolio"}>Portfolio</Link>{" "}
+            <Link href={"/portfolio"}>Portfolio</Link>
           </h1>
           <p>
             I&apos;ve been drawing since I was 10, but I started to focus on my
-            art around two years ago. Here you can find some of my best
-            illustrations, projects and work at a glance. If you are interested
-            to collaborate or you would like ne to work on your commission
-            contact me through the email you will find in the{" "}
+            art around two years ago.
+          </p>
+          <hr className="h-1 my-2 opacity-0" />
+          <p>
+            Here you can find some of my best illustrations, projects and work
+            at a glance. If you are interested to collaborate or you would like
+            ne to work on your commission contact me through the email you will
+            find in the
             <span className=" text-akai-red">
-              {" "}
-              <Link href={"/contacts"}>contacts</Link>{" "}
+              <Link href={"/contacts"}>contacts</Link>
             </span>
             .
           </p>
         </div>
 
-        <div className="  w-full h-fit mb-28 p-16 font-karla text-2xl bg-gray-dark bg-opacity-80 ">
+        <div className="pb-3 pt-16 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
-            {" "}
-            <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>{" "}
+            <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
           </h1>
           <p>
             Two years ago I started my career as a streamer and I couldn&apos;t
             be happier. It is an immense pleasure to have people who share my
-            interests and like what I&apos;m doing. My first priority is to make
-            people feel less alone and make them smile. I hope my community is
-            going to grow and I&apos;ll meet more and more nice people.
+            interests and like what I&apos;m doing.
+          </p>
+          <hr className="h-1 my-2 opacity-0" />
+          <p>
+            My first priority is to make people feel less alone and make them
+            smile. I hope my community is going to grow and I&apos;ll meet more
+            and more nice people.
+          </p>
+          <hr className="h-1 my-2 opacity-0" />
+          <p>
+            Join{" "}
+            <span className=" text-akai-red">
+              {" "}
+              <Link href={"https://discord.gg/PfhJVSuyJD"}>my discord</Link>
+            </span>{" "}
+            server for more info.
           </p>
         </div>
 
-        <div className=" w-full h-fit p-16 mb-4 font-karla text-2xl bg-gray-dark bg-opacity-80 ">
+        <div className="pb-3 pt-16 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
-            {" "}
-            <Link href={"/contacts"}>Contacts</Link>{" "}
+            <Link href={"/contacts"}>Contacts</Link>
           </h1>
           <p>
             If you want to collaborate on any art or web projects you can
             contact me on any of my socials, or email.
           </p>
+          <hr className="h-1 my-2 opacity-0" />
         </div>
       </div>
 
-      <div className="h-full relative md:w-1/2 -z-1">
+      <div className="hidden h-full pt-6 pb-3 bg-gray-dark bg-opacity-80 md:bg-opacity-0 md:relative md:col-start-2 md:row-span-full md:py-0 md:flex md:items-center md:justify-center md:w-1/2">
         <Image
-          alt="logo"
           src={akai}
-          className=" absolute bottom-10 right-14 scale-125"
+          alt="logo"
+          className="md:w-3/4 md:absolute md:right-0 md:bottom-3 opacity-20  md:opacity-100"
         ></Image>
       </div>
     </main>

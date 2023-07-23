@@ -14,7 +14,7 @@ const XsMenu = () => {
 
   return (
     <div className="shadow-lg mt-3 w-full">
-      <div className=" md:flex items-center justify-between bg-gray-light bg-opacity-10 py-4 md:px-10 px-7">
+      <div className=" md:flex items-center justify-between bg-gray-navbar py-4 md:px-10 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-pfd
         text-white text-opacity-75"
@@ -40,7 +40,7 @@ const XsMenu = () => {
         </div>
 
         <ul
-          className={`flex justify-center flex-col items-center md:flex md:items-center md:flex-row md:pb-0 absolute md:static bg-gray-background bg-opacity-10 md:z-auto z-[-1] 
+          className={`flex justify-center flex-col items-center md:flex md:items-center md:flex-row md:pb-0 absolute md:static  bg-gray-navbar md:z-auto z-[-1] 
           left-0 w-full md:w-auto md:pl-0 transition-all duration-500  ease-in ${
             open ? "top-20 " : "top-[-490px]"
           }`}
