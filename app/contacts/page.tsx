@@ -23,13 +23,13 @@ function Contacts() {
           </p>
 
           <div className="flex justify-around py-6">
-            <h2 className="cursor-pointer hover:animate-bounce hover:underline hover:text-akai-red text-2xl">
+            <h2 className="cursor-pointer animate-bounce hover:underline hover:text-akai-red text-2xl">
               <Link href={"https://www.instagram.com/ak_aik0/"}>Instagram</Link>
             </h2>
-            <h2 className="cursor-pointer hover:animate-bounce hover:underline hover:text-akai-red text-2xl">
+            <h2 className="cursor-pointer animate-bounce hover:underline hover:text-akai-red text-2xl">
               <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
             </h2>
-            <h2 className="cursor-pointer hover:animate-bounce hover:underline hover:text-akai-red text-2xl">
+            <h2 className="cursor-pointer animate-bounce hover:underline hover:text-akai-red text-2xl">
               <Link href={"https://twitter.com/ak_aik0"}>Twitter</Link>
             </h2>
           </div>
