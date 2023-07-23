@@ -24,7 +24,7 @@ function AboutMe() {
 
         <div className=" md:col-start-2 md:row-span-2 flex items-center justify-center py-6">
           <div className="w-1/2 md:w-2/3">
-            <Image src={my_photo} alt="photo" className="rounded-xl"></Image>
+            <Image src={my_photo} alt="photo"></Image>
           </div>
         </div>
 
