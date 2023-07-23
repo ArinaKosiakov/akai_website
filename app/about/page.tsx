@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import akai from "../../public/akai-lg.svg";
-import my_photo from "../../public/me_smaller.png";
+import my_photo from "../../public/me.png";
 
 function AboutMe() {
   useEffect(() => {
