@@ -17,15 +17,15 @@ function Home() {
           <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/about"}>About me</Link>
           </h1>
-          Hey there, I&apos;m Akai, an aspiring game industry enthusiast with a
-          diverse set of passions!
+          Hey there, I&apos;m Akai, an aspiring game industry and technology
+          enthusiast with a diverse set of passions!
           <hr className="my-2 opacity-0" />
           Currently pursuing my dreams as an
           <span className=" text-akai-red"> engineering student</span>, I&apos;m
           also a versatile
-          <span className=" text-akai-red"> content creator</span> and a budding
-          <span className=" text-akai-red"> artist</span>. But that&apos;s not
-          all – I often find myself delving into the world of web development.
+          <span className=" text-akai-red"> content creator</span>,
+          <span className=" text-akai-red"> artist</span> and sometimes web
+          developer.
           <hr className="my-2 opacity-0" />
           Join me in this captivating adventure as I bring together my passions,
           skills, and determination, striving to create captivating games and
