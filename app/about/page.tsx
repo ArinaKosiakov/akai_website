@@ -29,23 +29,20 @@ function AboutMe() {
         </div>
 
         <div className="py-10 px-10 font-karla text-xl md:col-start-1 md:col-end-2 ">
-          Hey there! I&apos;m Akai, a passionate ICT student, artist, web
-          developer, and technology enthusiast. As a versatile individual with a
-          love for creativity, I proudly wear multiple hats – from crafting
-          captivating digital experiences to expressing myself through art and
-          content creation.
+          Hey there! I&apos;m <span className=" text-akai-red">Akai</span>, a
+          passionate ICT student, artist, web developer, and technology
+          enthusiast. As a versatile individual with a love for creativity, I
+          proudly wear multiple hats – from crafting captivating digital
+          experiences to expressing myself through art and content creation.
           <hr className="my-2 opacity-0" />
           Video games have always been a major source of inspiration and joy in
-          my life. Their immersive worlds and engaging stories fuel my
-          imagination and drive my ambition. Ultimately, my dream is to
-          contribute to the gaming industry either as a skilled Character
-          designer, bringing unique and memorable characters to life, or as a
-          talented programmer, shaping the backbone of thrilling gaming
-          experiences.
+          my life.Ultimately, my dream is to contribute to the gaming industry
+          either as a skilled{" "}
+          <span className=" text-akai-red">Character designer</span>, bringing
+          unique and memorable characters to life, or as a talented{" "}
+          <span className=" text-akai-red">programmer</span>, shaping the
+          backbone of thrilling gaming experiences.
           <hr className="my-2 opacity-0" />
-          Apart from my digital pursuits, I&apos;m an avid traveler and fitness
-          enthusiast. Exploring new places, experiencing different cultures, and
-          connecting with people from all walks of life invigorate my spirit.
           When I&apos;m not immersed in the virtual world or bringing my
           creative visions to life, you can often find me hitting the gym,
           pushing my limits, and embracing a healthy and active lifestyle.
@@ -55,12 +52,6 @@ function AboutMe() {
           red in Japanese? This vibrant color perfectly represents me. Just like
           the color red, I&apos;m full of energy, enthusiasm, and a drive to
           make a lasting impact through my work.
-          <hr className="my-2 opacity-0" />
-          I believe that the synergy between technology, art, and personal
-          passions can unlock endless possibilities. So, join me on this
-          exciting journey of exploration, creation, and self-discovery as I
-          strive to make a meaningful impact through my work and embrace the
-          wonders of life.
           <hr className="my-2 opacity-0" />
           Thanks for stopping by!
         </div>
