@@ -17,11 +17,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex justify-center bg-gray-background overflow-hidden font-pfd font-normal">
         <div className="w-5/6 md:w-11/12 h-screen z-0 ">
-          <div className="sticky mb-4 h-fit ">
+          <div className="sticky mb-6 h-fit ">
             <Navbar></Navbar>
           </div>
 
-          <div className="w-full h-5/6 bg-white">{children}</div>
+          <div className=" w-full h-5/6 bg-white">{children}</div>
         </div>
         <div className="fixed bottom-0 w-full bg-gray-background">
           <Footer></Footer>

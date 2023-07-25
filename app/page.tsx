@@ -13,7 +13,7 @@ function Home() {
   return (
     <main className="page h-full flex flex-row justify-between text-white text-xl bg-gray-background">
       <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
-        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-10 px-10 md:col-start-1 md:col-end-2  md:text-2xl ">
+        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-8 px-10  mb-6 md:col-start-1 md:col-end-2  md:text-2xl ">
           <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/about"}>About me</Link>
           </h1>
@@ -34,7 +34,7 @@ function Home() {
           Let&apos;s embark on this thrilling ride together!
         </div>
 
-        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
+        <div className="pb-3 pt-8 px-10  mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/portfolio"}>Portfolio</Link>
           </h1>
@@ -56,7 +56,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
+        <div className="pb-3 pt-8 px-10 mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
           </h1>
@@ -65,9 +65,7 @@ function Home() {
           of you.
           <hr className="my-2 opacity-0" />
           My first and foremost priority is to make each and every one of you
-          happy through exciting gameplay and engaging content. I&apos;m
-          thrilled to have shared unforgettable moments with all of you during
-          this time.
+          happy through exciting gameplay and engaging content.
           <hr className="my-2 opacity-0" />
           If you&apos;re looking for more interactions and behind-the-scenes
           fun, don&apos;t forget to join
@@ -85,7 +83,7 @@ function Home() {
           journey! See you on the stream!
         </div>
 
-        <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
+        <div className="pb-3 pt-8 px-10 mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/contacts"}>Contacts</Link>
           </h1>
