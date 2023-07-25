@@ -90,8 +90,8 @@ function Home() {
             <Link href={"/contacts"}>Contacts</Link>
           </h1>
           <p>
-            Feel free to reach out to me through any of these platforms. I'm
-            looking forward to collaborate with you!
+            Feel free to reach out to me through any of these platforms.
+            I&apos;m looking forward to collaborate with you!
           </p>
           <hr className="my-2 opacity-0" />
         </div>
