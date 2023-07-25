@@ -32,6 +32,9 @@ function Contacts() {
             <h2 className="cursor-pointer animate-bounce hover:underline hover:text-akai-red text-2xl">
               <Link href={"https://twitter.com/ak_aik0"}>Twitter</Link>
             </h2>
+            <h2 className="cursor-pointer animate-bounce hover:underline hover:text-akai-red text-2xl">
+              <Link href={"https://linktr.ee/ak_aiko"}>Linktree</Link>
+            </h2>
           </div>
         </div>
 
