@@ -29,30 +29,40 @@ function AboutMe() {
         </div>
 
         <div className="py-10 px-10 font-karla text-xl md:col-start-1 md:col-end-2 ">
-          <p>
-            <span className=" text-akai-red">Akai</span> means red in japanese
-            and for me Akai means being passionate, loving and energetic.
-          </p>
-          <hr className="h-1 my-5 opacity-0" />
-          <p>
-            I&apos;ve been into technology since I was little and currently
-            I&apos;m studying Telecomunication engineering at the University. My
-            biggest dream is to work in the
-            <span className=" text-akai-red">game industry</span> and I am
-            trying my best to improve my programming and srtistic skills in
-            order to achieve this dream.
-          </p>
-          <hr className="h-1 my-5 opacity-0" />
-          <p>
-            I have different hobbies, some are being an{" "}
-            <span className=" text-akai-red">artist</span>,
-            <span className=" text-akai-red"> streamer</span>,
-            <span className=" text-akai-red"> painter</span>, and{" "}
-            <span className=" text-akai-red"> web developer</span> (and yes this
-            site, I made it! ). I like to work out and in my free time I spend
-            my time playing video games and watching animes. I am always opened
-            to suggestions!{" "}
-          </p>
+          Hey there! I&apos;m Akai, a passionate ICT student, artist, web
+          developer, and technology enthusiast. As a versatile individual with a
+          love for creativity, I proudly wear multiple hats – from crafting
+          captivating digital experiences to expressing myself through art and
+          content creation.
+          <hr className="my-2 opacity-0" />
+          Video games have always been a major source of inspiration and joy in
+          my life. Their immersive worlds and engaging stories fuel my
+          imagination and drive my ambition. Ultimately, my dream is to
+          contribute to the gaming industry either as a skilled Character
+          designer, bringing unique and memorable characters to life, or as a
+          talented programmer, shaping the backbone of thrilling gaming
+          experiences.
+          <hr className="my-2 opacity-0" />
+          Apart from my digital pursuits, I&apos;m an avid traveler and fitness
+          enthusiast. Exploring new places, experiencing different cultures, and
+          connecting with people from all walks of life invigorate my spirit.
+          When I&apos;m not immersed in the virtual world or bringing my
+          creative visions to life, you can often find me hitting the gym,
+          pushing my limits, and embracing a healthy and active lifestyle.
+          <hr className="my-2 opacity-0" />
+          <hr className="my-2 opacity-0" />
+          Did you know that <span className=" text-akai-red">AKAI</span> means
+          red in Japanese? This vibrant color perfectly represents me. Just like
+          the color red, I&apos;m full of energy, enthusiasm, and a drive to
+          make a lasting impact through my work.
+          <hr className="my-2 opacity-0" />
+          I believe that the synergy between technology, art, and personal
+          passions can unlock endless possibilities. So, join me on this
+          exciting journey of exploration, creation, and self-discovery as I
+          strive to make a meaningful impact through my work and embrace the
+          wonders of life.
+          <hr className="my-2 opacity-0" />
+          Thanks for stopping by!
         </div>
       </div>
     </div>

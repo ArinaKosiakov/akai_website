@@ -17,21 +17,21 @@ function Home() {
           <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/about"}>About me</Link>
           </h1>
-
-          <p>
-            Hello, I&apos;m Akai an
-            <span className=" text-akai-red"> engineering student</span>,
-            <span className=" text-akai-red"> content creator</span> and
-            <span className=" text-akai-red"> artist</span>. Sometimes I&apos;m
-            a web developer and other times a musician. I have many different
-            hobbies and interests and I love to share them with other people.
-          </p>
-          <hr className="h-1 my-2 opacity-0" />
-          <p>
-            My biggest dream is to work in the game industry. In order to
-            achieve this dream I&apos;m currently very focused on improving my
-            coding and art skills.
-          </p>
+          Hey there, I&apos;m Akai, an aspiring game industry enthusiast with a
+          diverse set of passions!
+          <hr className="my-2 opacity-0" />
+          Currently pursuing my dreams as an
+          <span className=" text-akai-red"> engineering student</span>, I&apos;m
+          also a versatile
+          <span className=" text-akai-red"> content creator</span> and a budding
+          <span className=" text-akai-red"> artist</span>. But that&apos;s not
+          all – I often find myself delving into the world of web development.
+          <hr className="my-2 opacity-0" />
+          Join me in this captivating adventure as I bring together my passions,
+          skills, and determination, striving to create captivating games and
+          memorable experiences.
+          <hr className="my-2 opacity-0" />
+          Let&apos;s embark on this thrilling ride together!
         </div>
 
         <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
@@ -39,19 +39,20 @@ function Home() {
             <Link href={"/portfolio"}>Portfolio</Link>
           </h1>
           <p>
-            I&apos;ve been drawing since I was 10, but I started to focus on my
-            art around two years ago.
+            Welcome to my portfolio! Here, you&apos;ll find a collection of my
+            creative endeavors and technical accomplishments.
           </p>
-          <hr className="h-1 my-2 opacity-0" />
+          <hr className="my-2 opacity-0" />
           <p>
-            Here you can find some of my best illustrations, projects and work
-            at a glance. If you are interested to collaborate or you would like
-            ne to work on your commission contact me through the email you will
-            find in the
+            Thank you for visiting, and I hope you enjoy exploring the pieces of
+            my journey showcased here. If you&apos;d like to collaborate or
+            discuss any opportunities, don&apos;t hesitate to get in touch!
+            <hr className="my-2 opacity-0" />
             <span className=" text-akai-red">
-              <Link href={"/contacts"}>contacts</Link>
+              <Link href={"/contacts"}>
+                Let&apos;s create something incredible together!
+              </Link>
             </span>
-            .
           </p>
         </div>
 
@@ -59,26 +60,29 @@ function Home() {
           <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
           </h1>
-          <p>
-            Two years ago I started my career as a streamer and I couldn&apos;t
-            be happier. It is an immense pleasure to have people who share my
-            interests and like what I&apos;m doing.
-          </p>
-          <hr className="h-1 my-2 opacity-0" />
-          <p>
-            My first priority is to make people feel less alone and make them
-            smile. I hope my community is going to grow and I&apos;ll meet more
-            and more nice people.
-          </p>
-          <hr className="h-1 my-2 opacity-0" />
-          <p>
-            Join{" "}
-            <span className=" text-akai-red">
+          Over the past 2 years, I&apos;ve been on an incredible streaming
+          journey, dedicated to spreading joy and providing quality time for all
+          of you.
+          <hr className="my-2 opacity-0" />
+          My first and foremost priority is to make each and every one of you
+          happy through exciting gameplay and engaging content. I&apos;m
+          thrilled to have shared unforgettable moments with all of you during
+          this time.
+          <hr className="my-2 opacity-0" />
+          If you&apos;re looking for more interactions and behind-the-scenes
+          fun, don&apos;t forget to join
+          <span className=" text-akai-red">
+            <Link href={"https://discord.gg/PfhJVSuyJD"}>
               {" "}
-              <Link href={"https://discord.gg/PfhJVSuyJD"}>my discord</Link>
-            </span>{" "}
-            server for more info.
-          </p>
+              my Discord server
+            </Link>
+          </span>
+          . It&apos;s the perfect place to stay connected and be a part of our
+          growing community.
+          <hr className="my-2 opacity-0" />
+          So, grab your favorite snack, sit back, and let&apos;s continue this
+          adventure together. Thank you all for being a part of this amazing
+          journey! See you on the stream!
         </div>
 
         <div className="pb-3 pt-10 px-10 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
@@ -86,10 +90,10 @@ function Home() {
             <Link href={"/contacts"}>Contacts</Link>
           </h1>
           <p>
-            If you want to collaborate on any art or web projects you can
-            contact me on any of my socials, or email.
+            Feel free to reach out to me through any of these platforms. I'm
+            looking forward to collaborate with you!
           </p>
-          <hr className="h-1 my-2 opacity-0" />
+          <hr className="my-2 opacity-0" />
         </div>
       </div>
 
