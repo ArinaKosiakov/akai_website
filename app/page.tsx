@@ -11,9 +11,9 @@ function Home() {
   });
 
   return (
-    <main className="page h-full flex flex-row justify-between text-white text-xl bg-gray-background">
+    <main className=" h-full flex flex-row justify-between text-white text-xl bg-gray-background">
       <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
-        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-8 px-10  mb-6 md:col-start-1 md:col-end-2  md:text-2xl ">
+        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-8 px-10 mb-6 md:col-start-1 md:col-end-2  md:text-2xl ">
           <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
             <Link href={"/about"}>About me</Link>
           </h1>

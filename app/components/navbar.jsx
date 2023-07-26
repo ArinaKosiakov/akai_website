@@ -13,7 +13,7 @@ const XsMenu = () => {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-lg mt-3 w-full">
+    <div className="z-10 shadow-lg w-full my-3 max-w-7xl mx-auto flex-none">
       <div className=" md:flex items-center justify-between bg-gray-navbar py-4 md:px-10 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-pfd
@@ -34,7 +34,7 @@ const XsMenu = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-8 cursor-pointer md:hidden text-gray-light hover:text-akai-red"
+          className="text-3xl absolute right-8 top-10 md:top-8 cursor-pointer md:hidden text-gray-light hover:text-akai-red"
         >
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
         </div>
@@ -50,12 +50,12 @@ const XsMenu = () => {
               key={link.name}
               className=" md:py-0 py-2 md:px-0 px-6 rounded md:ml-8 text-xl md:my-0 my-7 hover:text-akai-red text-white text-opacity-75"
             >
-              <a
+              <Link
                 href={link.link}
                 className="text-gray-800 hover:text-gray-400 duration-500"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

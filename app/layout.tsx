@@ -15,17 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex justify-center bg-gray-background overflow-hidden font-pfd font-normal">
-        <div className="w-5/6 md:w-11/12 h-screen z-0 ">
-          <div className="sticky mb-6 h-fit ">
-            <Navbar></Navbar>
-          </div>
-
-          <div className=" w-full h-5/6 bg-white">{children}</div>
+      <body className="flex flex-col h-[100dvh] bg-gray-background overflow-hidden font-pfd font-normal">
+        <Navbar />
+        <div className="flex-1 overflow-y-auto w-full my-3 max-w-7xl mx-auto">
+          {children}
         </div>
-        <div className="fixed bottom-0 w-full bg-gray-background">
-          <Footer></Footer>
-        </div>
+        <Footer />
 
         <script
           type="module"
