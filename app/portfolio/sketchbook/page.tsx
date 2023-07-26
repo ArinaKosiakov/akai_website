@@ -22,7 +22,7 @@ function Portfolio() {
           <h2 className=" font-pfd text-lg border-y border-white">
             {" "}
             <Link className=" cursor-pointer" href={"/portfolio/sketchbook"}>
-              SKETCHBOOKS
+              SKETCHBOOK
             </Link>
           </h2>
           <h2 className=" font-pfd text-lg">
