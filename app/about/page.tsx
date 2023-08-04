@@ -13,7 +13,7 @@ function AboutMe() {
     <div className="h-full text-white bg-gray-background">
       <div className="grid grid-cols-1 overflow-y-scroll scrollbar-hide md:grid-cols-2 md:grid-rows-hero bg-gray-dark bg-opacity-80 h-full ">
         <div className="py-10 px-10 font-karla text-xl md:col-start-1 md:col-end-2">
-          <h1 className=" text-5xl font-pfd mb-3 pt-6 hover:text-akai-red">
+          <h1 className=" text-5xl font-pfd mb-3 pt-6 ">
             Hello, I&apos;m <span className=" text-akai-red">Akai</span>
           </h1>
           <p className="text-2xl">
