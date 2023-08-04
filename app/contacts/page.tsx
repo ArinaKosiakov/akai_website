@@ -11,7 +11,7 @@ function Contacts() {
 
   return (
     <div className="h-full flex flex-row justify-between font-karla text-white text-xl bg-gray-background">
-      <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
+      <div className="grid grid-cols-1 overflow-y-scroll scrollbar-hide h-full md:w-1/2">
         <div className="flex flex-col pb-6 pt-10 px-10 md:col-start-1 md:col-end-2 md:text-2xl bg-gray-dark bg-opacity-80">
           <h1 className="text-5xl font-pfd mb-10 pt-6 hover:text-akai-red">
             Contacts

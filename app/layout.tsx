@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col h-[100dvh] bg-gray-background overflow-hidden font-pfd font-normal">
         <Navbar />
-        <div className="flex-1 overflow-y-auto w-full my-3 max-w-8xl mx-auto">
+        <div className="flex-1 overflow-y-auto w-full my-3 max-w-7xl mx-auto">
           {children}
         </div>
         <Footer />
