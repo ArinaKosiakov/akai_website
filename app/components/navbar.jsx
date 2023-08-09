@@ -19,7 +19,7 @@ const XsMenu = () => {
           className="font-bold text-2xl cursor-pointer flex items-center font-pfd
         text-white text-opacity-75"
         >
-          <span className="text-3xl text-indigo-600 mr-1 pt-2">
+          <span className="text-3xl mr-1 pt-2">
             <Link href={"/"}>
               {" "}
               <Image
@@ -50,10 +50,7 @@ const XsMenu = () => {
               key={link.name}
               className=" md:py-0 py-2 md:px-0 px-6 rounded md:ml-8 text-xl md:my-0 my-7 hover:text-akai-red text-white text-opacity-75"
             >
-              <Link
-                href={link.link}
-                className="text-gray-800 hover:text-gray-400 duration-500"
-              >
+              <Link href={link.link} className="duration-500">
                 {link.name}
               </Link>
             </li>

@@ -6,22 +6,22 @@ import akai from "../../public/akai-lg.svg";
 
 function Portfolio() {
   useEffect(() => {
-    document.title = "Akaiko - Homepage";
+    document.title = "Akaiko - Portfolio";
   });
 
   return (
     <div className=" h-full flex flex-row justify-between text-white text-3xl bg-gray-background">
       <div className="grid grid-cols-1 w-full font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
         <div className=" h-full flex items-center justify-center flex-col font-pfd text-justify bg-akai-red-dark opacity-80 text-white md:text-5xl">
-          <h2 className="mb-6 cursor-pointer hover:border-y hover:border-white">
+          <h2 className="mb-6 cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
             {" "}
             <Link href={"/portfolio/concepts"}>CONCEPTS</Link>
           </h2>
-          <h2 className="mb-6 cursor-pointer hover:border-y hover:border-white">
+          <h2 className="mb-6 cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
             {" "}
             <Link href={"/portfolio/sketchbook"}>SKETCHBOOK</Link>
           </h2>
-          <h2 className="cursor-pointer hover:border-y hover:border-white">
+          <h2 className="cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
             {" "}
             <Link href={"/portfolio/illustrations"}>ILLUSTRATIONS</Link>
           </h2>
