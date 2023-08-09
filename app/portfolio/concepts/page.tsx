@@ -1,16 +1,8 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import akai from "../../public/akai-lg.svg";
-import Artbar from "../../components/artbar";
 import { Sketch1, Sketch4 } from "../../../public";
 
 function Concepts() {
-  useEffect(() => {
-    document.title = "Akaiko - Concepts";
-  });
-
   return (
     <div className="grid grid-cols-3 grid-rows-5 gap-2 place-items-stretch  h-full">
       <div className=" col-start-1 col-end-2 ">

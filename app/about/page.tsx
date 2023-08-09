@@ -1,14 +1,8 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import akai from "../../public/akai-lg.svg";
 import my_photo from "../../public/me.png";
 
 function AboutMe() {
-  useEffect(() => {
-    document.title = "Akaiko - About me";
-  });
   return (
     <div className="h-full text-white bg-gray-background">
       <div className="grid grid-cols-1 overflow-y-scroll scrollbar-hide md:grid-cols-2 md:grid-rows-hero bg-gray-dark bg-opacity-80 h-full ">

@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import akai from "../../public/akai-lg.svg";
@@ -11,10 +10,6 @@ import {
 } from "@phosphor-icons/react";
 
 function Contacts() {
-  useEffect(() => {
-    document.title = "Akaiko - Contacts";
-  });
-
   return (
     <div className="h-full flex flex-row justify-between font-karla text-white text-xl bg-gray-background">
       <div className="grid grid-cols-1 overflow-y-scroll scrollbar-hide h-full md:w-1/2">

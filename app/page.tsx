@@ -3,13 +3,8 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import akai from "../public/akai-lg.svg";
 import Link from "next/link";
-import { useEffect } from "react";
 
 function Home() {
-  useEffect(() => {
-    document.title = "Akaiko - Homepage";
-  });
-
   return (
     <main className="h-full flex flex-row justify-between text-white text-xl bg-gray-background">
       <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">

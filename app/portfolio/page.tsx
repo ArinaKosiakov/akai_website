@@ -1,14 +1,9 @@
-"use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import akai from "../../public/akai-lg.svg";
 
 function Portfolio() {
-  useEffect(() => {
-    document.title = "Akaiko - Portfolio";
-  });
-
   return (
     <div className=" h-full flex flex-row justify-between text-white text-3xl bg-gray-background">
       <div className="grid grid-cols-1 w-full font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
