@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import akai from "../../public/akai-lg.svg";
+import akai from "../../../public/akai-lg.svg";
 
 function Portfolio() {
   return (

@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { Sketch1, Sketch4 } from "../../../public";
 
-function Sketchbook() {
+import Sketch1 from "../../../../public/sketches/01.jpg";
+import Sketch4 from "../../../../public/sketches/04.jpg";
+
+function Concepts() {
   return (
     <div className="grid grid-cols-3 grid-rows-5 gap-2 place-items-stretch  h-full">
       <div className=" col-start-1 col-end-2 ">
@@ -85,4 +87,4 @@ function Sketchbook() {
     </div>
   );
 }
-export default Sketchbook;
+export default Concepts;
