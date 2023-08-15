@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Artbar from "../components/artbar";
+import Artbar from "../../components/artbar";
 
 export const metadata = {
   title: "Akaiko - Portfolio",

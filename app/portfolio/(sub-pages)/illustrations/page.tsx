@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Sketch1, Sketch4 } from "../../../public";
+
+import Sketch1 from "../../../../public/sketches/01.jpg";
+import Sketch4 from "../../../../public/sketches/04.jpg";
 
 function Illustrations() {
   return (
