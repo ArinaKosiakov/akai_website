@@ -26,13 +26,13 @@ function AboutMe() {
           <p>
             Hey there! I&apos;m <span className=" text-white italic">Akai</span>
             , a passionate ICT student, artist, web developer, and technology
-            enthusiast. As a versatile individual with a love for creativity, I
+            enthusiast. As a versatile individual with love for creativity, I
             proudly wear multiple hats – from crafting captivating digital
             experiences to expressing myself through art and content creation.
           </p>
           <p>
             Video games have always been a major source of inspiration and joy
-            in my life.Ultimately, my dream is to contribute to the gaming
+            in my life. Ultimately, my dream is to contribute to the gaming
             industry either as a skilled{" "}
             <span className=" text-white italic">Character designer</span>,
             bringing unique and memorable characters to life, or as a talented{" "}
