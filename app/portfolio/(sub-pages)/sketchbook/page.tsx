@@ -19,7 +19,7 @@ import Sketch15 from "../../../../public/sketches/15.jpg";
 
 function Sketchbook() {
   return (
-    <div className="gap-3\ grid h-full grid-cols-3 grid-rows-5  place-items-stretch">
+    <div className="grid h-full grid-cols-3 grid-rows-5 place-items-stretch  gap-3">
       <div className=" col-start-1 col-end-2 ">
         <Image
           className="h-full w-full object-cover"
