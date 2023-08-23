@@ -2,7 +2,7 @@ import React from "react";
 
 export default function footer() {
   return (
-    <footer className="w-full my-3 max-w-7xl mx-auto flex-none text-center text-gray-light bg-gray-background">
+    <footer className=" mx-auto my-3 w-full max-w-7xl flex-none bg-gray-background text-center font-karla text-gray-light">
       Copyright &copy; 2023 Akaiko
     </footer>
   );

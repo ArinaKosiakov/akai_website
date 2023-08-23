@@ -25,8 +25,8 @@ module.exports = {
     
       
       fontFamily: {
-        pfd: ["Playfair Display", "serif"],
-        karla: ["Karla", "sans"],
+        eiko:["var(--font-eiko)"],
+        karla: ["var(--font-karla)"],
       },
 
     

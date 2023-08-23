@@ -6,13 +6,13 @@ import Link from "next/link";
 
 function Home() {
   return (
-    <main className="h-full flex flex-row justify-between text-white text-xl bg-gray-background">
-      <div className="grid grid-cols-1 font-karla overflow-y-scroll scrollbar-hide h-full md:w-1/2">
-        <div className="bg-gray-dark bg-opacity-80 pb-3 pt-8 px-10 mb-6 md:col-start-1 md:col-end-2  md:text-2xl ">
-          <h1 className="text-5xl font-pfd mb-10 hover:text-akai-red">
+    <main className="flex h-full flex-row justify-between bg-gray-background text-xl text-white">
+      <div className="grid h-full grid-cols-1 overflow-y-scroll font-karla scrollbar-hide md:w-1/2">
+        <div className="mb-6 bg-gray-dark bg-opacity-80 px-10 pb-3 pt-8 md:col-start-1 md:col-end-2  md:text-2xl ">
+          <h1 className="mb-10 font-eiko text-5xl text-akai-red">
             <Link href={"/about"}>About me</Link>
           </h1>
-          <div className="flex flex-col gap-4 text-white/70">
+          <div className="flex flex-col gap-4 font-light text-white/70">
             <p>
               Hey there, I&apos;m Akai, a game industry and technology
               enthusiast with a diverse set of passions!
@@ -21,10 +21,10 @@ function Home() {
             <p>
               {" "}
               Currently pursuing my dreams as an
-              <span className="text-white italic"> engineering student</span>,
+              <span className="italic text-white"> engineering student</span>,
               I&apos;m also a versatile
-              <span className="text-white italic"> content creator</span>,
-              <span className="text-white italic"> artist</span> and sometimes
+              <span className="italic text-white"> content creator</span>,
+              <span className="italic text-white"> artist</span> and sometimes
               web developer.
             </p>
 
@@ -39,8 +39,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="pb-3 pt-8 px-10  mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
-          <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
+        <div className="mb-6 bg-gray-dark bg-opacity-80  px-10 pb-3 pt-8 md:col-start-1 md:col-end-2 md:text-2xl ">
+          <h1 className=" mb-10 font-eiko text-5xl text-akai-red">
             <Link href={"/portfolio"}>Portfolio</Link>
           </h1>
           <div className="flex flex-col gap-4 text-white/70">
@@ -59,8 +59,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="pb-3 pt-8 px-10 mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2  md:text-2xl">
-          <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
+        <div className="mb-6 bg-gray-dark bg-opacity-80 px-10 pb-3 pt-8 md:col-start-1 md:col-end-2  md:text-2xl">
+          <h1 className=" mb-10 font-eiko text-5xl text-akai-red">
             <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
           </h1>
           <div className="flex flex-col gap-4 text-white/70">
@@ -100,8 +100,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="pb-3 pt-8 px-10 mb-6 bg-gray-dark bg-opacity-80 md:col-start-1 md:col-end-2 md:text-2xl ">
-          <h1 className=" text-5xl font-pfd mb-10 hover:text-akai-red">
+        <div className=" bg-gray-dark bg-opacity-80 px-10 pb-5 pt-8 md:col-start-1 md:col-end-2 md:text-2xl ">
+          <h1 className=" mb-10 font-eiko text-5xl text-akai-red">
             <Link href={"/contacts"}>Contacts</Link>
           </h1>
           <div className="text-white/70">
@@ -113,11 +113,11 @@ function Home() {
         </div>
       </div>
 
-      <div className="hidden h-full pt-6 pb-3 bg-gray-dark bg-opacity-80 md:bg-opacity-0 md:relative md:col-start-2 md:row-span-full md:py-0 md:flex md:items-center md:justify-center md:w-1/2">
+      <div className="hidden h-full bg-gray-dark bg-opacity-80 pb-3 pt-6 md:relative md:col-start-2 md:row-span-full md:flex md:w-1/2 md:items-center md:justify-center md:bg-opacity-0 md:py-0">
         <Image
           src={akai}
           alt="logo"
-          className="md:w-3/4 md:absolute md:right-0 md:bottom-3 opacity-20  md:opacity-100"
+          className="opacity-20 md:absolute md:bottom-3 md:right-0 md:w-3/4  md:opacity-100"
         ></Image>
       </div>
     </main>

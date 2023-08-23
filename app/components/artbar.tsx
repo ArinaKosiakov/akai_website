@@ -6,8 +6,8 @@ import React, { useState } from "react";
 export default function Artbar() {
   const segment = useSelectedLayoutSegment();
   return (
-    <div className="mb-3 h-fit sticky top-0 flex flex-col items-center justify-around sm:flex-row w-full  bg-akai-red-dark text-white">
-      <h2 className=" font-pfd text-lg ">
+    <div className="sticky top-0 mb-3 flex w-full items-center justify-around bg-gray-dark bg-opacity-80 py-1 font-karla  text-white backdrop-blur-lg">
+      <h2 className=" text-lg ">
         {" "}
         <Link
           className={`cursor-pointer border-y  ${
@@ -18,7 +18,7 @@ export default function Artbar() {
           CONCEPTS
         </Link>
       </h2>
-      <h2 className=" font-pfd text-lg ">
+      <h2 className=" text-lg ">
         {" "}
         <Link
           className={`cursor-pointer border-y border-transparent ${
@@ -29,7 +29,7 @@ export default function Artbar() {
           SKETCHBOOK
         </Link>
       </h2>
-      <h2 className=" font-pfd text-lg ">
+      <h2 className=" text-lg ">
         {" "}
         <Link
           className={`cursor-pointer border-y border-transparent ${
