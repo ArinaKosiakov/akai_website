@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import akai from "../../public/akai-lg.svg";
+import akai from "../../../public/akai-lg.svg";
 
 function Portfolio() {
   return (
@@ -19,6 +19,14 @@ function Portfolio() {
           <h2 className="cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
             {" "}
             <Link href={"/portfolio/illustrations"}>ILLUSTRATIONS</Link>
+          </h2>
+          <h2 className="mt-6 cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
+            {" "}
+            <Link href={"/portfolio/test"}>TEST</Link>
+          </h2>
+          <h2 className="mt-6 cursor-pointer border-y border-transparent transition hover:border-y hover:border-white">
+            {" "}
+            <Link href={"https://www.artstation.com/akaiko"}>ARTSTATION</Link>
           </h2>
         </div>
       </div>

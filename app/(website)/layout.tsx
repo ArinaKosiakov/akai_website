@@ -1,12 +1,12 @@
 import "./globals.css";
-import "./components/navbar";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import "../components/navbar";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import localFont from "next/font/local";
 import { Karla } from "next/font/google";
 
 const eiko = localFont({
-  src: "../public/fonts/PPEiko-Medium.otf",
+  src: "../../public/fonts/PPEiko-Medium.otf",
   display: "swap",
   preload: true,
   weight: "500",
@@ -33,9 +33,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${eiko.variable} ${karla.variable}`}>
-      <body className="flex flex-col h-[100dvh] bg-gray-background overflow-hidden font-pfd font-normal">
+      <body className="font-pfd flex h-[100dvh] flex-col overflow-hidden bg-gray-background font-normal">
         <Navbar />
-        <div className="flex-1 overflow-y-auto w-full my-3 max-w-7xl mx-auto">
+        <div className="mx-auto my-3 w-full max-w-7xl flex-1 overflow-y-auto">
           {children}
         </div>
         <Footer />

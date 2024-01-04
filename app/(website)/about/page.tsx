@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import my_photo from "../../public/me.png";
+import my_photo from "../../../public/me.png";
 
 function AboutMe() {
   return (
@@ -24,11 +24,12 @@ function AboutMe() {
 
         <div className=" flex flex-col gap-4 px-10 py-10 font-karla text-xl text-white/70 md:col-start-1 md:col-end-2 ">
           <p>
-            Hey there! I&apos;m <span className=" italic text-white">Akai</span>
-            , a passionate ICT student, artist, web developer, and technology
-            enthusiast. As a versatile individual with love for creativity, I
-            proudly wear multiple hats – from crafting captivating digital
-            experiences to expressing myself through art and content creation.
+            Hey there! I&apos;m Arina, but you can call me{" "}
+            <span className=" italic text-white">Akai</span>, a passionate ICT
+            student, artist, web developer, and technology enthusiast. As a
+            versatile individual with love for creativity, I proudly wear
+            multiple hats – from crafting captivating digital experiences to
+            expressing myself through art and content creation.
           </p>
           <p>
             Video games have always been a major source of inspiration and joy

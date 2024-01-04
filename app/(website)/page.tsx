@@ -1,7 +1,7 @@
 "use client";
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import akai from "../public/akai-lg.svg";
+import akai from "../../public/akai-lg.svg";
 import Link from "next/link";
 
 function Home() {
@@ -20,12 +20,11 @@ function Home() {
 
             <p>
               {" "}
-              Currently pursuing my dreams as an
-              <span className="italic text-white"> engineering student</span>,
-              I&apos;m also a versatile
+              A newborn ICT
+              <span className="italic text-white"> engineer</span>,
               <span className="italic text-white"> content creator</span>,
-              <span className="italic text-white"> artist</span> and sometimes
-              web developer.
+              <span className="italic text-white"> artist </span> and sometimes
+              <span className="italic text-white"> web developer</span>.
             </p>
 
             <p>

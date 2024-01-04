@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import akai from "../../public/akai-lg.svg";
+import akai from "../../../public/akai-lg.svg";
 import {
   InstagramLogo,
   Tree,
@@ -27,7 +27,7 @@ function Contacts() {
           <div className="mt-6 flex flex-wrap gap-6 py-6">
             <Link
               className="cursor-pointer  text-2xl hover:text-akai-red hover:underline"
-              href={"https://www.instagram.com/ak_aik0/"}
+              href={"https://www.instagram.com/dull.akai/"}
             >
               <InstagramLogo size={32} />
             </Link>

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Artbar from "../../components/artbar";
+import Artbar from "../../../components/artbar";
 
 export const metadata = {
   title: "Akaiko - Portfolio",
@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="h-full text-white font-karlatext-xl bg-gray-background overflow-y-scroll scrollbar-hide">
+    <div className="font-karlatext-xl h-full overflow-y-scroll bg-gray-background text-white scrollbar-hide">
       <div>
         <Artbar />
         {children}
