@@ -58,47 +58,6 @@ function Home() {
           </div>
         </div>
 
-        <div className="mb-6 bg-gray-dark bg-opacity-80 px-10 pb-3 pt-8 md:col-start-1 md:col-end-2  md:text-2xl">
-          <h1 className=" mb-10 font-eiko text-5xl text-akai-red">
-            <Link href={"https://www.twitch.tv/ak_aiko"}>Twitch</Link>
-          </h1>
-          <div className="flex flex-col gap-4 text-white/70">
-            <p>
-              Over the past 2 years, I&apos;ve been on an incredible streaming
-              journey, dedicated to spreading joy and providing quality time for
-              all of you.
-            </p>
-            <p>
-              My first and foremost priority is to make each and every one of
-              you happy through exciting gameplay and engaging content.
-            </p>
-            <p>
-              If you&apos;re looking for more interactions and behind-the-scenes
-              fun, don&apos;t forget to join{" "}
-              <Link
-                className=" text-akai-red"
-                href={"https://discord.gg/PfhJVSuyJD"}
-              >
-                {" "}
-                my Discord server
-              </Link>
-              .
-            </p>
-
-            <p>
-              {" "}
-              It&apos;s the perfect place to stay connected and be a part of our
-              growing community.
-            </p>
-            <p>
-              {" "}
-              So, grab your favorite snack, sit back, and let&apos;s continue
-              this adventure together. Thank you all for being a part of this
-              amazing journey! See you on the stream!
-            </p>
-          </div>
-        </div>
-
         <div className=" bg-gray-dark bg-opacity-80 px-10 pb-5 pt-8 md:col-start-1 md:col-end-2 md:text-2xl ">
           <h1 className=" mb-10 font-eiko text-5xl text-akai-red">
             <Link href={"/contacts"}>Contacts</Link>
