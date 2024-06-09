@@ -36,7 +36,8 @@ function Home() {
           <div className="flex flex-col gap-4 text-white/70">
             <p>
               Welcome to my portfolio! Here, you&apos;ll find a collection of my
-              creative endeavors and technical accomplishments.
+              favourite and best works. Some of the projects are personal and
+              some were creted during my master in Concept art at BigRock ac
             </p>
             <p>
               Thank you for visiting, and I hope you enjoy exploring the pieces
