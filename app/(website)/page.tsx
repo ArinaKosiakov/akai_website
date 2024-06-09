@@ -26,15 +26,6 @@ function Home() {
               <span className="italic text-white"> artist </span> and sometimes
               <span className="italic text-white"> web developer</span>.
             </p>
-
-            <p>
-              {" "}
-              Join me in this adventure as I bring together my passions, skills,
-              and determination, striving to create engaging games and memorable
-              experiences.
-            </p>
-
-            <p> Let&apos;s embark on this thrilling ride together!</p>
           </div>
         </div>
 
