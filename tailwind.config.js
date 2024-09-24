@@ -19,18 +19,25 @@ module.exports = {
         "gray-background": "#343536",
         "gray-navbar": "#3c3e3f",
         "gray-light": "#5D5E5F",
-        "akai-red": "#FA5C5C",
-        "akai-red-medium": "#AD4040",
-        "akai-red-dark": "#6E2929",
+        akai: {
+          100: "#F0CCCC",
+          200: "#E7ABAB",
+          300: "#DE8B8B",
+          400: "#D46A6A",
+          500: "#CB4949",
+          600: "#A63C3C",
+          700: "#822F2F",
+          800: "#5D2222",
+          900: "#391414",
+          950: "#140707",
+        },
       },
-    
-      
+
       fontFamily: {
-        eiko:["var(--font-eiko)"],
+        eiko: ["var(--font-eiko)"],
         karla: ["var(--font-karla)"],
       },
 
-    
       screens: {
         xs: "350px",
         sm: "640px",
@@ -48,9 +55,7 @@ module.exports = {
         "2xl": "1536px",
         // => @media (min-width: 1536px) { ... }
       },
-      
     },
-
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };

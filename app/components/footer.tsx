@@ -20,16 +20,14 @@ function Footer() {
 
   return (
     <footer className="flex h-10 w-full items-center justify-around">
-      <div className="flex  flex-row">
-        <p className="text-white">dull.akai</p>
-        <p className="ml-3 text-white text-opacity-50">
-          &copy; {year} Arina Kosiakov
-        </p>
+      <div className="flex flex-row">
+        <p className="text-neutral-500">dull.akai</p>
+        <p className="ml-3 text-neutral-500">&copy; {year} Arina Kosiakov</p>
       </div>
       <div>
-        <ul className="flex flex-row text-white text-opacity-50">
+        <ul className="flex flex-row text-neutral-500">
           {Links.map((link) => (
-            <li className="px-3" key={link.name}>
+            <li className="px-3 hover:text-white" key={link.name}>
               {link.name}
             </li>
           ))}

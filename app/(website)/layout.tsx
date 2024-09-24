@@ -21,7 +21,7 @@ const karla = Karla({
 });
 
 export const metadata = {
-  title: "Akaiko",
+  title: "DullAkai",
   description: "Personal webpage",
 };
 

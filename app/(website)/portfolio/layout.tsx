@@ -9,10 +9,7 @@ export const metadata = {
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
     <div className="font-karlatext-xl h-full overflow-y-scroll bg-gray-background text-white scrollbar-hide">
-      <div>
-        <Artbar />
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
