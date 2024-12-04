@@ -75,7 +75,7 @@ function Contacts() {
             placeholder="Message"
           ></textarea>
           <button
-            className="hover: mt-6 h-10 w-24 rounded-md bg-akai-800"
+            className="mt-6 h-10 w-24 rounded-md bg-akai-700 hover:bg-akai-500"
             type="submit"
             value="Submit"
           >

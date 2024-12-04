@@ -1,25 +1,32 @@
 "use client";
-import { Inter } from "next/font/google";
-import character from "../../public/homepage_imgs/characters.jpg";
-import env from "../../public/homepage_imgs/env.jpg";
-import illustration from "../../public/homepage_imgs/illustration.jpg";
-import projects from "../../public/homepage_imgs/projects.jpg";
-import sketches from "../../public/homepage_imgs/sketches.jpg";
-import Image from "next/image";
-import image from "../../public/homepage_imgs/pedro-monkey-puppet.gif";
+
+import { ls } from "../i18n/translations";
+import HomepageCarousel from "../components/homepageCarousel";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import Link from "next/link";
 
 function Home() {
-  const homepageText =
-    "Ehm well, we are still trying to work on this, be patient";
-
   return (
-    <main className="block h-full bg-gray-background text-xl text-white">
-      <div className="flex flex-col items-center justify-center">
-        <p className="text-center font-eiko text-5xl" id="homepage-text">
-          {homepageText}
+    <main className="bg-custom_gray-700 flex h-full flex-col justify-center text-xl text-white scrollbar-hide">
+      {/* hero section */}
+      <div className="bg-custom_gray-700 flex h-fit flex-col items-center justify-center pb-3">
+        <p className="text-center font-eiko text-5xl">{ls.homepage.title}</p>
+        <p className="mt-8 text-center font-eiko text-2xl text-white text-opacity-60">
+          {ls.homepage.subtitle}
         </p>
-        <Image src={image} className="mt-16 w-60" />
+      </div>
+      {/* view of the main projects */}
+      <div className="h-3/5 w-full md:mt-6">
+        <HomepageCarousel />
+      </div>
+      <div className="flex w-full justify-end">
+        <Link
+          href={"/portfolio"}
+          className="mt-6 flex h-10 items-center justify-center rounded-md px-2 text-white text-opacity-40 hover:cursor-pointer hover:text-opacity-100"
+        >
+          {ls.buttons.more}
+          <HiArrowNarrowRight className="ml-6" />
+        </Link>
       </div>
     </main>
   );

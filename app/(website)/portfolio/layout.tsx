@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="font-karlatext-xl h-full overflow-y-scroll bg-gray-background text-white scrollbar-hide">
+    <div className="font-karlatext-xl bg-custom_gray-700 h-full overflow-y-scroll text-white scrollbar-hide">
       <div>{children}</div>
     </div>
   );

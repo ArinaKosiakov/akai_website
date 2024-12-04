@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import "./globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -32,9 +33,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${eiko.variable} ${karla.variable}`}>
-      <body className="font-pfd flex h-[100dvh] flex-col overflow-hidden bg-gray-background font-normal">
+      <body className="font-pfd bg-custom_gray-700 flex h-[100dvh] flex-col overflow-hidden font-normal">
         <Navbar />
-        <div className="mx-auto my-3 w-full max-w-7xl flex-1 overflow-y-auto">
+        <div className="mx-auto my-3 w-full max-w-7xl flex-1 overflow-y-auto scrollbar-hide">
           {children}
         </div>
         <Footer />
