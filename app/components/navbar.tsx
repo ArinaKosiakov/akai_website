@@ -15,7 +15,7 @@ function Navbar() {
   const path = usePathname();
 
   return (
-    <div className="mb-8 flex h-20 w-full justify-center align-middle shadow-md">
+    <div className="mb-8 flex h-20 w-full justify-center align-middle shadow-sm">
       <div className="flex h-full w-9/12 flex-row items-center justify-between">
         <div className="ml-6">
           <Link href={"/"}>
@@ -23,13 +23,13 @@ function Navbar() {
           </Link>
         </div>
         <div>
-          <ul className="flex flex-row items-center justify-center text-white">
+          <ul className="flex flex-row items-center justify-center text-white text-opacity-70">
             {Links.map((link) => (
               <li
                 key={link.name}
                 className="relative z-10 mx-6 hover:cursor-pointer"
               >
-                <Link href={link.link} className="relative">
+                <Link href={link.link} className="relative hover:text-white">
                   {link.name}
                 </Link>
                 <span

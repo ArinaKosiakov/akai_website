@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import my_photo from "../../../public/pfp.jpg";
-import Timeline from "@/app/components/timeline";
+import TimelineCustom from "@/app/components/timeline";
 import thisisme from "@/public/thisisme.png";
 
 function AboutMe() {
@@ -29,11 +29,11 @@ function AboutMe() {
           a kid. Through whole my life I kept a pencil in my hands, I was
           drawing in my notebooks, in my books and on the desks.
         </p>
-        <div className="mt-10 w-full">
-          <h2 className="pd-10 mt-6 font-eiko text-2xl">
-            My latest achievements
-          </h2>
-          <Timeline />
+        <div className="mt-10 w-full overflow-scroll scrollbar-hide">
+          <h2 className="pd-10 font-eiko text-2xl">My latest achievements</h2>
+          <div className="mt-6 w-full">
+            <TimelineCustom />
+          </div>
         </div>
       </div>
       <div className="relative flex w-1/2 items-center justify-center">

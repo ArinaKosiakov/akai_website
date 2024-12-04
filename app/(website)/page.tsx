@@ -22,7 +22,7 @@ function Home() {
       <div className="flex w-full justify-end">
         <Link
           href={"/portfolio"}
-          className="mt-6 flex h-10 items-center justify-center rounded-md px-2 text-white text-opacity-40 hover:cursor-pointer hover:text-opacity-100"
+          className="mt-6 flex h-10 items-center justify-center rounded-md px-2 text-white text-opacity-70 hover:cursor-pointer hover:text-opacity-100"
         >
           {ls.buttons.more}
           <HiArrowNarrowRight className="ml-6" />

@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
-type PageType = "environement" | "character" | "illustration" | "sketchbook";
+type PageType = "environements" | "illustrations" | "sketchbook" | "projects";
 
 export async function generateStaticParams() {
-  const slugs = ["environements", "characters"];
+  const slugs = ["environements", "illustrations", "sketchbook", "projects"];
 
   return slugs.map((slug) => ({
     slug,
@@ -19,9 +19,19 @@ const pages = [
     title: "Environements",
   },
   {
-    slug: "characters",
-    type: "character",
-    title: "Characters",
+    slug: "sketchbook",
+    type: "sketchbook",
+    title: "Sketchbook",
+  },
+  {
+    slug: "projects",
+    type: "project",
+    title: "Projects",
+  },
+  {
+    slug: "illustrations",
+    type: "illustration",
+    title: "Illustrations",
   },
 ];
 
@@ -35,6 +45,7 @@ export default function PortfolioPage(props: PageProps) {
   const { params } = props;
 
   const data = pages.find((page) => page.slug === params.slug);
+  console.log(data);
 
   if (!data) {
     return notFound();
