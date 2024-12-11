@@ -17,7 +17,7 @@ function AboutMe() {
         <p className="pb-6">
           Hey there! I&apos;m Arina, in art DullAkai or just Akai. I&apos;m a
           passionate artist and technology enthusiast. My interests go from
-          videogames, to traditional art, from web development to to dancing.
+          videogames, to traditional art, from programming to reading books.
         </p>
         <p className="pb-6">
           You may ask why <span className="text-white">AKAI </span>? Well it
@@ -25,15 +25,15 @@ function AboutMe() {
           in my life as it perfectly represents me.
         </p>
         <p className="pb-6">
-          Talking about art, it was always very important in my life since I was
-          a kid. Through whole my life I kept a pencil in my hands, I was
-          drawing in my notebooks, in my books and on the desks.
+          Talking about art, it has always been very important in my life since
+          I was a kid. Through whole my life I kept a pencil in my hands, I was
+          drawing in my notebooks, in my books and on the desks. It has always
+          been my biggest passion and finally now I can share my works with
+          other people.
         </p>
-        <div className="mt-10 w-full overflow-scroll scrollbar-hide">
+        <div className="mt-10 w-full">
           <h2 className="pd-10 font-eiko text-2xl">My latest achievements</h2>
-          <div className="mt-6 w-full">
-            <TimelineCustom />
-          </div>
+          <TimelineCustom />
         </div>
       </div>
       <div className="relative flex w-1/2 items-center justify-center">

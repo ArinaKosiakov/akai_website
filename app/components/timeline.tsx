@@ -1,41 +1,61 @@
 "use client";
-import { title } from "process";
-import { Timeline } from "flowbite-react";
+
 import { HiCalendar } from "react-icons/hi";
+import { Chrono } from "react-chrono";
 
 function TimelineCustom() {
-  const events = [
+  // const items = [
+  //   {
+  //     date: "17 December, 2023",
+  //     cardTitle: "Graduation from University of Padua",
+  //     cardSubTitle:
+  //       "Obtained my Master's Degree in ICT for Internet and Multimedia",
+  //   },
+  //   {
+  //     date: "28 August, 2024",
+  //     cardTitle: "Master in Concept art",
+  //     cardSubTitle: "Completed the master in Concept art at BigRock accademy",
+  //   },
+  //   {
+  //     date: "September, 2024",
+  //     cardTitle: "Freelance artist",
+  //     cardSubTitle: "Started my career as a frellance artist",
+  //   },
+  // ];
+  const items = [
     {
-      year: "October 2019 - December 2023",
-      title: "Master's degree in Information engineering, University of Padua",
+      title: "Graduation from University of Padua, Dec 2023",
     },
     {
-      year: "March 2024 - August 2024",
-      title: "Master in Concept Art, BigRock school",
+      title: "Master in Concept art, Aug 2024",
     },
     {
-      year: "March 2024 - August 2024",
-      title: "Master in Concept Art, BigRock school",
-    },
-    {
-      year: "March 2024 - August 2024",
-      title: "Master in Concept Art, BigRock school",
+      title: "Freelance artist, Sep 2024 ",
     },
   ];
 
   return (
-    <div className="overflow-x">
-      <Timeline horizontal>
-        {events.map((event, key) => (
-          <Timeline.Item key={key}>
-            <Timeline.Point icon={HiCalendar} />
-            <Timeline.Content>
-              <Timeline.Time>{event.year}</Timeline.Time>
-              <Timeline.Title>{event.title}</Timeline.Title>
-            </Timeline.Content>
-          </Timeline.Item>
-        ))}
-      </Timeline>
+    <div className="mt-10">
+      <Chrono
+        items={items}
+        mode={"HORIZONTAL"}
+        showSingle
+        cardLess
+        disableToolbar
+        fontSizes={{ title: "0.8rem" }}
+        theme={{
+          primary: "rgba(203, 73, 73, 0.75)",
+          secondary: "rgba(203, 73, 73)",
+          titleColor: "rgba(255,255,255,0.3)",
+          titleColorActive: "#fff",
+          toolbarBgColor: "none",
+          toolbarBtnBgColor: "none",
+          cardBgColor: "#262627",
+          cardTitleColor: "rgba(255,255,255,0.7)",
+          cardSubtitleColor: "rgba(255,255,255,0.7)",
+        }}
+        classNames={{ card: "my-card" }}
+      ></Chrono>
     </div>
   );
   // <div className="relative mt-3 flex h-52 w-full items-center justify-center scrollbar-hide">
