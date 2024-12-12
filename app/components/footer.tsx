@@ -27,7 +27,10 @@ function Footer() {
       <div>
         <ul className="flex flex-row text-neutral-500">
           {Links.map((link) => (
-            <li className="px-3 hover:text-white" key={link.name}>
+            <li
+              className="cursor-pointer px-3 hover:text-white"
+              key={link.name}
+            >
               {link.name}
             </li>
           ))}

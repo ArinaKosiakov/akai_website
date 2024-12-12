@@ -9,6 +9,7 @@ import {
   TwitchLogo,
   TwitterLogo,
 } from "@phosphor-icons/react";
+import { FaArtstation } from "react-icons/fa";
 
 import { handleContactSubmission } from "@/app/components/lib/actions";
 
@@ -23,7 +24,7 @@ function Contacts() {
         </p>
         <div className="flex flex-row gap-6 py-6">
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="hover:text-white-akai-200 cursor-pointer text-2xl text-akai-500 hover:text-akai-200"
             href={"https://www.instagram.com/dull.akai/"}
             target="_blank"
           >
@@ -31,7 +32,7 @@ function Contacts() {
           </Link>
 
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="cursor-pointer text-2xl text-akai-500 hover:text-akai-200"
             href={"https://www.twitch.tv/ak_aiko"}
             target="_blank"
           >
@@ -39,11 +40,18 @@ function Contacts() {
           </Link>
 
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="cursor-pointer text-2xl text-akai-500 hover:text-akai-200"
             href={"https://linktr.ee/dull.akai"}
             target="_blank"
           >
             <Tree size={32} />
+          </Link>
+          <Link
+            className="cursor-pointer text-2xl text-akai-500 hover:text-akai-200"
+            href={"https://www.artstation.com/dullakai"}
+            target="_blank"
+          >
+            <FaArtstation size={32} />
           </Link>
         </div>
       </div>
