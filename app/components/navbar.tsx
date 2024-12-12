@@ -15,7 +15,7 @@ function Navbar() {
   const path = usePathname();
 
   return (
-    <div className="mb-8 flex h-20 w-full justify-center align-middle shadow-sm">
+    <div className="flex h-20 w-full justify-center align-middle shadow-sm">
       <div className="flex h-full w-9/12 flex-row items-center justify-between">
         <div className="ml-6">
           <Link href={"/"}>
