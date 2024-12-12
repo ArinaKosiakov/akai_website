@@ -13,18 +13,19 @@ const appString = new LocalizedStrings<EN>({
 
 const availableLangs = ["en" /*, "it"  , "de" */];
 
-var storedLang = localStorage.getItem("selectedLang");
+// var storedLang = localStorage.getItem("selectedLang");
 
-const userLang =
-  storedLang || navigator.language || (navigator as any).userLanguage;
+// const userLang =
+//   storedLang || navigator.language || (navigator as any).userLanguage;
 
-let firstToken = (userLang || "").split("-")[0];
+// let firstToken = (userLang || "").split("-")[0];
 
-if (availableLangs.includes(firstToken)) {
-  appString.setLanguage(firstToken);
-} else {
-  appString.setLanguage("en");
-}
+// if (availableLangs.includes(firstToken)) {
+//   appString.setLanguage(firstToken);
+// } else {
+//   appString.setLanguage("en");
+// }
+let firstToken = "en";
 
 //console.log("lang", firstToken);
 export var currentLang = firstToken || "en";

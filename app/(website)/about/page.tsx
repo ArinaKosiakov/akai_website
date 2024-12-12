@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import my_photo from "../../../public/pfp.jpg";
-import TimelineCustom from "@/app/components/timeline";
 import thisisme from "@/public/thisisme.png";
+import HorizontalTimeline from "@/app/components/timeline";
+import { ls } from "../../i18n/translations";
 
 function AboutMe() {
   return (
@@ -20,7 +21,7 @@ function AboutMe() {
           videogames, to traditional art, from programming to reading books.
         </p>
         <p className="pb-6">
-          You may ask why <span className="text-white">AKAI </span>? Well it
+          You may ask why <span className="text-akai-500">AKAI </span>? Well it
           means red in Japanese and I can&apos;t see myself without this color
           in my life as it perfectly represents me.
         </p>
@@ -33,7 +34,7 @@ function AboutMe() {
         </p>
         <div className="mt-10 w-full">
           <h2 className="pd-10 font-eiko text-2xl">My latest achievements</h2>
-          <TimelineCustom />
+          <HorizontalTimeline />
         </div>
       </div>
       <div className="relative flex w-1/2 items-center justify-center">

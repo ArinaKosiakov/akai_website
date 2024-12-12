@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export class EN {
   homepage = {
     title: "Crafting Worlds, One Brushstroke at a Time",
@@ -22,6 +24,22 @@ export class EN {
     graduation: "Graduation at University of Padua",
     master: "Master in Concept art at BigRock school",
   };
+  events = [
+    {
+      title: "Graduation at University of Padua",
+      content:
+        "Completed my Master's degree in ICT for Internet and Multimedia at the university of Padua",
+    },
+    {
+      title: "Graduation at BigRock Accademy",
+      content:
+        "Completed my Master course in Concept art at the BigRock Accademy ",
+    },
+    {
+      title: "Freelance",
+      content: "Started my career as a freelance artist",
+    },
+  ];
   contacts = {
     title: "Contacts",
     subtitle:
