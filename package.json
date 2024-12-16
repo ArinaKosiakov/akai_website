@@ -16,6 +16,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "@react-email/components": "^0.0.25",
     "@sanity/vision": "^3.57.2",
+    "axios": "^1.7.9",
     "flowbite-react": "^0.10.2",
     "localized-strings": "^0.2.4",
     "next": "^14.2.10",
