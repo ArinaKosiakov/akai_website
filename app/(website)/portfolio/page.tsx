@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 import CardCarousel from "@/app/components/carousel";
+import { FaArrowRight } from "react-icons/fa";
 
 import Sketch5 from "../../../public/sketches/01.jpg";
 import Sketch4 from "../../../public/sketches/04.jpg";
@@ -11,19 +12,39 @@ function Concepts() {
   return (
     <div className="flex h-full flex-col justify-center">
       <div className="mb-24">
-        <div className="mb-6 font-eiko text-2xl">Projects</div>
-        <CardCarousel type="projects" cards={} />
+        <Link href={"/portfolio/projects"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Projects</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
+        <CardCarousel type="projects" />
       </div>
       <div className="mb-24">
-        <div className="mb-6 font-eiko text-2xl">Environments</div>
+        <Link href={"/portfolio/environments"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Environments</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
         <CardCarousel type="environments" />
       </div>
       <div className="mb-24">
-        <div className="mb-6 font-eiko text-2xl">Sketchbook</div>
+        <Link href={"/portfolio/sketchbook"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Sketchbook</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
         <CardCarousel type="sketchbook" />
       </div>
       <div className="mb-24">
-        <div className="mb-6 font-eiko text-2xl">Illustrations</div>
+        <Link href={"/portfolio/illustrations"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Illustrations</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
         <CardCarousel type="illustrations" />
       </div>
     </div>

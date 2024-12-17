@@ -1,11 +1,12 @@
+import Display from "@/app/components/display";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
-type PageType = "environements" | "illustrations" | "sketchbook" | "projects";
+type PageType = "environemnts" | "illustrations" | "sketchbook" | "projects";
 
 export async function generateStaticParams() {
-  const slugs = ["environements", "illustrations", "sketchbook", "projects"];
+  const slugs = ["environments", "illustrations", "sketchbook", "projects"];
 
   return slugs.map((slug) => ({
     slug,
@@ -14,9 +15,9 @@ export async function generateStaticParams() {
 
 const pages = [
   {
-    slug: "environements",
-    type: "environement",
-    title: "Environements",
+    slug: "environments",
+    type: "environment",
+    title: "Environments",
   },
   {
     slug: "sketchbook",
@@ -43,18 +44,28 @@ interface PageProps {
 
 export default function PortfolioPage(props: PageProps) {
   const { params } = props;
+  let isTrue: boolean;
 
   const data = pages.find((page) => page.slug === params.slug);
-  console.log(data);
+  // console.log(data);
 
   if (!data) {
     return notFound();
   }
+  params.slug === "projects" || params.slug === "environments"
+    ? (isTrue = true)
+    : (isTrue = false);
+  console.log(isTrue);
 
   return (
     <div>
-      <h1>{data.title}</h1>
-      <p>{data.type}</p>
+      {isTrue ? (
+        <div>This div is rendered because the variable is true.</div>
+      ) : (
+        <div>
+          <Display type={params.slug} />
+        </div>
+      )}
     </div>
   );
 }
