@@ -1,3 +1,4 @@
+import AdvancedCarousel from "@/app/components/advancedCarousel";
 import Display from "@/app/components/display";
 import { notFound } from "next/navigation";
 
@@ -55,12 +56,13 @@ export default function PortfolioPage(props: PageProps) {
   params.slug === "projects" || params.slug === "environments"
     ? (isTrue = true)
     : (isTrue = false);
-  console.log(isTrue);
 
   return (
     <div>
       {isTrue ? (
-        <div>This div is rendered because the variable is true.</div>
+        <div>
+          <AdvancedCarousel type={params.slug} />
+        </div>
       ) : (
         <div>
           <Display type={params.slug} />

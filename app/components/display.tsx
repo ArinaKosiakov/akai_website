@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../public/homepage_imgs/env.jpg";
+import img from "../../public/sketches/13.jpg";
 import Image from "next/image";
 
 type DisplayProp = {
@@ -40,11 +40,18 @@ function Display({ type }: DisplayProp) {
     },
   ];
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex h-full flex-col items-center">
       {images.map((image, index) => (
-        <div key={index} className="mb-32">
-          <Image src={image.url} alt={""}></Image>
-          <div className="mt-2 flex w-full flex-row justify-between">
+        <div
+          key={index}
+          className="w-100% mb-12 flex flex-col items-center md:max-w-[80%]"
+        >
+          <Image
+            src={image.url}
+            alt={""}
+            className="h-auto max-w-[80%]"
+          ></Image>
+          <div className="mt-4 flex w-full flex-row justify-between">
             <span className="text-white text-opacity-70">
               {image.title} - {image.description}
             </span>

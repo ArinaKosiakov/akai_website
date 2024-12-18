@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ls } from "../i18n/translations";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Event = {
   id: number;
@@ -54,7 +55,7 @@ const HorizontalTimeline: React.FC<HorizontalTimelineProps> = ({ styles }) => {
     <div className="mt-10 flex w-full flex-col items-center justify-center text-center">
       <div className="flex w-full items-center justify-center">
         <button onClick={handlePrevious} disabled={activeEvent === 0}>
-          {"<"}
+          <FaChevronLeft />
         </button>
         <div className="relative mx-3 h-[2px] w-4/5 bg-white">
           <div className="absolute -top-[6px] flex w-full justify-around">
@@ -81,7 +82,7 @@ const HorizontalTimeline: React.FC<HorizontalTimelineProps> = ({ styles }) => {
           onClick={handleNext}
           disabled={activeEvent === events.length - 1}
         >
-          {">"}
+          <FaChevronRight />
         </button>
       </div>
       <div className="mt-10 min-h-24 w-auto max-w-[75%] border-l border-akai-500 px-7 py-3">

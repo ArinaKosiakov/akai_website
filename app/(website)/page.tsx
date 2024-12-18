@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Home() {
   return (
-    <main className="flex h-full flex-col justify-center bg-custom_gray-700 text-xl text-white scrollbar-hide">
+    <main className="flex h-full flex-col justify-center bg-custom_gray-700 pl-[2%] text-xl text-white scrollbar-hide">
       {/* hero section */}
       <div className="flex h-fit flex-col items-center justify-center bg-custom_gray-700 pb-3">
         <p className="text-center font-eiko text-5xl">{ls.homepage.title}</p>

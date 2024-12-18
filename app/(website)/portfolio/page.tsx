@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import CardCarousel from "@/app/components/carousel";
+import CardCarousel from "@/app/components/portfolioCarousel";
 import { FaArrowRight } from "react-icons/fa";
 
 import Sketch5 from "../../../public/sketches/01.jpg";
@@ -8,9 +8,9 @@ import Sketch4 from "../../../public/sketches/04.jpg";
 import Sketch1 from "../../../public/concepts/kiri1.jpg";
 import Sketch2 from "../../../public/concepts/kiri_expressions.jpg";
 
-function Concepts() {
+function Portfolio() {
   return (
-    <div className="flex h-full flex-col justify-center">
+    <div className="flex h-full flex-col justify-center px-[5%]">
       <div className="mb-24">
         <Link href={"/portfolio/projects"}>
           <div className="mb-6 flex items-center font-eiko">
@@ -50,4 +50,4 @@ function Concepts() {
     </div>
   );
 }
-export default Concepts;
+export default Portfolio;
