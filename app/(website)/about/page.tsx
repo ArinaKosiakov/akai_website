@@ -4,6 +4,7 @@ import my_photo from "../../../public/pfp.jpg";
 import thisisme from "@/public/thisisme.png";
 import HorizontalTimeline from "@/app/components/timeline";
 import { ls } from "../../i18n/translations";
+import MySlider from "@/app/components/mySlider";
 
 function AboutMe() {
   return (
@@ -53,12 +54,15 @@ function AboutMe() {
           />
         </div>
       </div>
-      <div className="">
-        div che si muove con i diversi programmi che so usare
+      <div className="mb-10 mt-20">
+        <MySlider />
       </div>
-      <div className="">
-        Cool places ive been to: ibs, framestore, dneg con photo
-      </div>
+      {/* <div className="">
+        <h2 className="font-eiko text-2xl text-white">
+          Some of the cool places I&apos;ve been to
+        </h2>
+        pictures
+      </div> */}
     </div>
   );
 }

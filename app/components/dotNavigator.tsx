@@ -12,24 +12,22 @@ function DotNavigator({ src_arr, onNavigate }: DotNavigatorProp) {
   const [canMoveRight, setCanMoveRight] = useState(true);
 
   const handleNavigate = (index: number) => {
-    if (index === 0) {
-      setCanMoveLeft(false);
+    if (index < 0 || index >= src_arr.length) {
+      return; // Early exit if index is out of bounds
     }
-    if (index === src_arr.length - 1) {
-      setCanMoveRight(false);
-    }
-    if (index >= 0 && index < src_arr.length) {
-      if (index > 0) {
-        setCanMoveLeft(true);
-      }
 
-      setCurrentIndex(index);
-      console.log(currentIndex);
+    // Update navigation state
+    setCanMoveLeft(index > 0);
+    setCanMoveRight(index < src_arr.length - 1);
 
-      if (onNavigate) {
-        onNavigate(index);
-      }
-    }
+    // Update current index
+    setCurrentIndex(index);
+
+    // Log the new index
+    console.log(index);
+
+    // Trigger callback if provided
+    onNavigate?.(index);
   };
 
   return (
