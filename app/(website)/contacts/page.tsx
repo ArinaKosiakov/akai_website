@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import Link from "next/link";
-import akai from "../../../public/akai-lg.svg";
+
+import { toast } from "react-toastify";
+
 import {
   InstagramLogo,
   Tree,
@@ -13,17 +14,54 @@ import {
 import { handleContactSubmission } from "@/app/components/lib/actions";
 
 function Contacts() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
+
+    try {
+      // Call server function
+      const response = await handleContactSubmission(form);
+      console.log("mex", response);
+
+      // Trigger toast based on response
+      if (response!.success) {
+        toast.success(response!.message);
+      } else {
+        toast.error(response!.message);
+      }
+    } catch (error) {
+      toast.error("An unexpected error occurred. Please try again.");
+    }
+  };
+
   return (
-    <div className="flex h-full w-full flex-row items-center justify-around text-white">
-      <div className="flex w-1/2 flex-col items-start gap-20 pr-10">
-        <h1 className="font-eiko text-5xl">CONTACTS</h1>
+    <div className="flex h-full w-full flex-col items-center text-white md:flex-row lg:justify-around">
+      <div className="mt-16 flex w-1/2 flex-col items-start gap-8 md:mt-0 md:gap-14 md:pr-8 lg:gap-20 lg:pr-10">
+        <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">CONTACTS</h1>
         <p className="text-l self-stretch font-karla">
           You can get to know me better and see more of my works by visiting the
           links below. <br /> For more information send me a message.
         </p>
         <div className="flex flex-row gap-6 py-6">
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="cursor-pointer text-xl text-akai-500 hover:text-white md:text-2xl"
             href={"https://www.instagram.com/dull.akai/"}
             target="_blank"
           >
@@ -31,7 +69,7 @@ function Contacts() {
           </Link>
 
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="cursor-pointer text-xl text-akai-500 hover:text-white md:text-2xl"
             href={"https://www.twitch.tv/ak_aiko"}
             target="_blank"
           >
@@ -39,7 +77,7 @@ function Contacts() {
           </Link>
 
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
+            className="cursor-pointer text-xl text-akai-500 hover:text-white md:text-2xl"
             href={"https://linktr.ee/dull.akai"}
             target="_blank"
           >
@@ -47,10 +85,11 @@ function Contacts() {
           </Link>
         </div>
       </div>
-      <div className="w-1/3 font-karla">
+      <span className="my-10 w-full border-[1px] border-white/5 md:hidden"></span>
+      <div className="w-2/3 pl-8 font-karla lg:w-1/3 lg:pl-0">
         <form
           className="flex flex-col"
-          action={handleContactSubmission}
+          action={handleSubmit}
           name="messageForm"
         >
           <label className="mb-2">Name</label>
@@ -59,6 +98,7 @@ function Contacts() {
             name="name"
             type="text"
             placeholder="Name"
+            onChange={handleChange}
           />
           <label className="mb-2 mt-6">Email</label>
           <input
@@ -66,6 +106,7 @@ function Contacts() {
             name="email"
             type="email"
             placeholder="Email"
+            onChange={handleChange}
           />
           <label className="mb-2 mt-6">Message</label>
           <textarea
@@ -73,6 +114,7 @@ function Contacts() {
             name="message"
             id="message"
             placeholder="Message"
+            onChange={handleChange}
           ></textarea>
           <button
             className="mt-6 h-10 w-24 rounded-md bg-akai-700 hover:bg-akai-500"

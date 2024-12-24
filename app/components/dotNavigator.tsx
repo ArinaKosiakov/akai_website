@@ -31,7 +31,7 @@ function DotNavigator({ src_arr, onNavigate }: DotNavigatorProp) {
   };
 
   return (
-    <div className="flex w-full flex-row items-center justify-between md:w-[70%] lg:w-[40%] xl:w-[30%]">
+    <div className="flex w-[30%] flex-row items-center justify-between lg:w-[40%]">
       <button
         disabled={!canMoveLeft}
         onClick={() => handleNavigate(currentIndex - 1)}

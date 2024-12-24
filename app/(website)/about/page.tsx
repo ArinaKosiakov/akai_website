@@ -10,11 +10,11 @@ function AboutMe() {
   return (
     <div className="h-full w-full pl-[5%]">
       <div className="flex flex-row items-center justify-around text-white">
-        <div className="flex w-3/5 flex-col items-start pr-10">
-          <h1 className="font-eiko text-5xl">
+        <div className="flex w-full flex-col items-start lg:w-3/5 lg:pr-10">
+          <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">
             Hello, I&apos;m <span className="text-akai-500">Akai</span>
           </h1>
-          <h2 className="pb-10 pt-2 text-xl">
+          <h2 className="pb-10 pt-2 text-lg lg:text-2xl">
             Concept artist, environment designer
           </h2>
           <p className="pb-6">
@@ -35,11 +35,13 @@ function AboutMe() {
             works with other people.
           </p>
           <div className="mt-10 w-full">
-            <h2 className="pd-10 font-eiko text-2xl">My latest achievements</h2>
+            <h2 className="pd-10 font-eiko text-lg lg:text-2xl">
+              My latest achievements
+            </h2>
             <HorizontalTimeline styles={""} />
           </div>
         </div>
-        <div className="relative flex w-2/5 items-center justify-center">
+        <div className="relative hidden w-2/5 items-center lg:flex lg:justify-center">
           <Image
             height={500}
             src={my_photo}
@@ -48,7 +50,7 @@ function AboutMe() {
           />
           <Image
             src={thisisme}
-            className="absolute right-0 top-36 z-10"
+            className="absolute right-0 top-36 z-10 hidden 2xl:block"
             width={300}
             alt=""
           />
@@ -57,12 +59,6 @@ function AboutMe() {
       <div className="mb-10 mt-20">
         <MySlider />
       </div>
-      {/* <div className="">
-        <h2 className="font-eiko text-2xl text-white">
-          Some of the cool places I&apos;ve been to
-        </h2>
-        pictures
-      </div> */}
     </div>
   );
 }

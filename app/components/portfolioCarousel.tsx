@@ -96,7 +96,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
     <div className="relative flex w-full justify-center">
       {/* Left Navigation Button */}
       <button
-        className={`absolute left-0 z-10 flex h-full w-[3%] items-center justify-center bg-custom_gray-700 bg-opacity-30 p-2 backdrop-blur-sm ${!canScrollLeft ? "opacity-0" : ""}`}
+        className={`absolute left-0 z-10 flex h-full w-8 items-center justify-center bg-custom_gray-700 bg-opacity-30 p-2 backdrop-blur-sm lg:w-[3%] ${!canScrollLeft ? "opacity-0" : ""}`}
         onClick={scrollLeft}
         disabled={!canScrollLeft}
       >
@@ -109,7 +109,10 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
         style={{ scrollBehavior: "smooth" }}
       >
         {cards.map((card, index) => (
-          <div key={index} className="min-w-[300px]">
+          <div
+            key={index}
+            className="min-w-[150px] md:min-w-[200px] lg:min-w-[300px]"
+          >
             <Card
               className="border-none"
               renderImage={() => (
@@ -131,7 +134,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
       </div>
       {/* Right Navigation Button */}
       <button
-        className={`absolute right-0 z-10 flex h-full w-[3%] items-center justify-center bg-custom_gray-700 bg-opacity-30 p-2 backdrop-blur-sm ${!canScrollRight ? "opacity-0" : ""}`}
+        className={`absolute right-0 z-10 flex h-full w-8 items-center justify-center bg-custom_gray-700 bg-opacity-30 p-2 backdrop-blur-sm lg:w-[3%] ${!canScrollRight ? "opacity-0" : ""}`}
         onClick={scrollRight}
         disabled={!canScrollRight}
       >

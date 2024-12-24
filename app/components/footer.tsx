@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 function Footer() {
@@ -26,7 +26,7 @@ function Footer() {
           &copy; {year} Arina Kosiakov
         </p>
       </div>
-      <div>
+      <div className="hidden md:block">
         <ul className="flex flex-row text-white text-opacity-30">
           {Links.map((link) => (
             <li

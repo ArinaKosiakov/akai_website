@@ -40,7 +40,7 @@ function Display({ type }: DisplayProp) {
     },
   ];
   return (
-    <div className="flex h-full flex-col items-center">
+    <div className="flex h-full flex-col items-center text-sm md:text-xl">
       {images.map((image, index) => (
         <div
           key={index}
@@ -55,7 +55,9 @@ function Display({ type }: DisplayProp) {
             <span className="text-white text-opacity-70">
               {image.title} - {image.description}
             </span>
-            <span className="text-white text-opacity-50">{image.date}</span>
+            <span className="text-xs text-white text-opacity-50 md:text-xl">
+              {image.date}
+            </span>
           </div>
         </div>
       ))}

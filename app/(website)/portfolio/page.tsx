@@ -3,11 +3,6 @@ import Link from "next/link";
 import CardCarousel from "@/app/components/portfolioCarousel";
 import { FaArrowRight } from "react-icons/fa";
 
-import Sketch5 from "../../../public/sketches/01.jpg";
-import Sketch4 from "../../../public/sketches/04.jpg";
-import Sketch1 from "../../../public/concepts/kiri1.jpg";
-import Sketch2 from "../../../public/concepts/kiri_expressions.jpg";
-
 function Portfolio() {
   return (
     <div className="flex h-full flex-col justify-center px-[5%]">
