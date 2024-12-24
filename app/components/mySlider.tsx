@@ -10,13 +10,7 @@ import Image from "next/image";
 
 function MySlider() {
   return (
-    <Slider
-      duration={40}
-      width="200px"
-      pauseOnHover={true}
-      blurBorders={true}
-      blurBorderColor={"#3f4041"}
-    >
+    <Slider pauseOnHover={true} blurBorders={true} blurBorderColor={"#3f4041"}>
       <Slider.Slide>
         <Image src={ps} alt="any" width={85} height={85} />
       </Slider.Slide>
