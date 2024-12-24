@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const flowbite = require("flowbite-react/tailwind");
 
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
+    flowbite.content(),
   ],
   theme: {
     extend: {
@@ -15,10 +17,17 @@ module.exports = {
       colors: {
         white: "#FFFFFF",
         black: "#000000",
-        "gray-dark": "#0F0F0F",
-        "gray-background": "#343536",
-        "gray-navbar": "#3c3e3f",
-        "gray-light": "#5D5E5F",
+        custom_gray: {
+          100: "#f2f2f2",
+          200: "#d8d9d9",
+          300: "#bebfc0",
+          400: "#8a8c8e",
+          500: "#717375",
+          600: "#58595b",
+          700: "#3f4041",
+          800: "#262627",
+          900: "#0d0d0d",
+        },
         akai: {
           100: "#F0CCCC",
           200: "#E7ABAB",
@@ -57,5 +66,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [require("tailwind-scrollbar-hide"), flowbite.plugin()],
 };

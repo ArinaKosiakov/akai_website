@@ -1,8 +1,12 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import "./globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import localFont from "next/font/local";
 import { Karla } from "next/font/google";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const eiko = localFont({
   src: "../../public/fonts/PPEiko-Medium.otf",
@@ -32,9 +36,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${eiko.variable} ${karla.variable}`}>
-      <body className="font-pfd flex h-[100dvh] flex-col overflow-hidden bg-gray-background font-normal">
+      <body className="font-pfd flex h-[100dvh] flex-col overflow-hidden bg-custom_gray-700 font-normal">
         <Navbar />
-        <div className="mx-auto my-3 w-full max-w-7xl flex-1 overflow-y-auto">
+        <ToastContainer position="top-right" />
+        <div className="mx-auto my-3 w-9/12 flex-1 overflow-y-auto scrollbar-hide">
           {children}
         </div>
         <Footer />

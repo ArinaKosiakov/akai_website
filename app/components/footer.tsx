@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 function Footer() {
@@ -21,14 +21,16 @@ function Footer() {
   return (
     <footer className="flex h-10 w-full items-center justify-around">
       <div className="flex flex-row">
-        <p className="text-neutral-500">dull.akai</p>
-        <p className="ml-3 text-neutral-500">&copy; {year} Arina Kosiakov</p>
+        <p className="text-white text-opacity-30">dull.akai</p>
+        <p className="ml-3 text-white text-opacity-30">
+          &copy; {year} Arina Kosiakov
+        </p>
       </div>
-      <div>
-        <ul className="flex flex-row text-neutral-500">
+      <div className="hidden md:block">
+        <ul className="flex flex-row text-white text-opacity-30">
           {Links.map((link) => (
             <li
-              className="cursor-pointer px-3 hover:text-white"
+              className="px-3 hover:cursor-pointer hover:text-white"
               key={link.name}
             >
               {link.name}

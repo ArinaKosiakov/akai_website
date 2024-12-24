@@ -1,25 +1,48 @@
 import React from "react";
-import Image from "next/image";
-import img from "../../../public/illustration/1.jpg";
+import Link from "next/link";
+import CardCarousel from "@/app/components/portfolioCarousel";
+import { FaArrowRight } from "react-icons/fa";
 
-import { TfiArrowRight } from "react-icons/tfi";
-import { TfiArrowTopRight } from "react-icons/tfi";
-
-import { title } from "process";
-import ProjectView from "@/app/components/ProjectView";
-
-//map function to show all the different folders (characters,environments, projects, illustrations, sketchbook)
-
-function Concepts() {
+function Portfolio() {
   return (
-    <div className="flex h-[100vh] w-full flex-col justify-start gap-8">
-      <div className="mt-20">
-        <ProjectView title="Characters" posts={["gravity fallout"]} />
+    <div className="flex h-full flex-col justify-center px-[5%]">
+      <div className="mb-24">
+        <Link href={"/portfolio/projects"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Projects</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
+        <CardCarousel type="projects" />
       </div>
-      <div className="mt-40">
-        <ProjectView title="Characters" posts={["gravity fallout"]} />
+      <div className="mb-24">
+        <Link href={"/portfolio/environments"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Environments</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
+        <CardCarousel type="environments" />
+      </div>
+      <div className="mb-24">
+        <Link href={"/portfolio/sketchbook"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Sketchbook</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
+        <CardCarousel type="sketchbook" />
+      </div>
+      <div className="mb-24">
+        <Link href={"/portfolio/illustrations"}>
+          <div className="mb-6 flex items-center font-eiko">
+            <span className="mr-3 text-2xl">Illustrations</span>
+            <FaArrowRight className="mt-[2px]" />
+          </div>
+        </Link>
+        <CardCarousel type="illustrations" />
       </div>
     </div>
   );
 }
-export default Concepts;
+export default Portfolio;

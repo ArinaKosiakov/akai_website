@@ -8,11 +8,11 @@ export default function Artbar() {
   const segment = useSelectedLayoutSegment();
   const pathname = usePathname();
   return (
-    <div className="sticky top-0 mb-3 flex w-full items-center justify-around bg-gray-dark bg-opacity-80 py-1 font-karla  text-white backdrop-blur-lg">
-      <h2 className=" text-lg ">
+    <div className="bg-custom_gray-800 sticky top-0 mb-3 flex w-full items-center justify-around bg-opacity-80 py-1 font-karla text-white backdrop-blur-lg">
+      <h2 className="text-lg">
         {" "}
         <Link
-          className={`cursor-pointer border-y  hover:border-white ${
+          className={`cursor-pointer border-y hover:border-white ${
             pathname === "/portfolio" ? "border-white" : "border-transparent"
           }`}
           href={"/portfolio"}
@@ -20,7 +20,7 @@ export default function Artbar() {
           CONCEPTS
         </Link>
       </h2>
-      <h2 className=" text-lg ">
+      <h2 className="text-lg">
         {" "}
         <Link
           className={`cursor-pointer border-y border-transparent hover:border-white ${
@@ -31,10 +31,10 @@ export default function Artbar() {
           SKETCHBOOK
         </Link>
       </h2>
-      <h2 className=" text-lg ">
+      <h2 className="text-lg">
         {" "}
         <Link
-          className={`cursor-pointer border-y border-transparent hover:border-white  ${
+          className={`cursor-pointer border-y border-transparent hover:border-white ${
             segment === "illustrations" ? "border-white" : "border-transparent"
           }`}
           href={"/portfolio/illustrations"}
@@ -42,7 +42,7 @@ export default function Artbar() {
           ILLUSTRATIONS
         </Link>
       </h2>
-      <h2 className=" text-lg ">
+      <h2 className="text-lg">
         {" "}
         <Link
           className="cursor-pointer border-y border-transparent hover:border-white"
