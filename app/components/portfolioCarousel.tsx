@@ -11,7 +11,7 @@ type CardData = {
   title: string;
   description: string;
   src: StaticImageData;
-  id: string;
+  id?: string;
 };
 
 type CardCarouselProps = {
@@ -30,31 +30,26 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
       title: "Card 1",
       description: "Description for card 1",
       src: bg,
-      id: "",
     },
     {
       title: "Card 2",
       description: "Description for card 2",
       src: bg,
-      id: "1",
     },
     {
       title: "Card 3",
       description: "Description for card 3",
       src: bg,
-      id: "",
     },
     {
       title: "Card 4",
       description: "Description for card 4",
       src: bg,
-      id: "",
     },
     {
       title: "Card 5",
       description: "Description for card 4",
       src: bg,
-      id: "",
     },
     {
       title: "Card 6",
@@ -118,7 +113,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
               renderImage={() => (
                 <Image width={500} height={250} src={card.src} alt="image 1" />
               )}
-              href={`/portfolio/${type}/${card.id}`}
+              href={`/portfolio/${type}/#${index}`}
               // href={`/portfolio/illustrations`}
             >
               {/* <Image src={card.src} alt="image" width={500} height={2500} /> */}

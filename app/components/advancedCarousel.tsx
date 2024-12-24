@@ -56,6 +56,7 @@ function AdvancedCarousel({ type }: DisplayProp) {
     <div className="mb-12 w-full">
       {cards.map((card, cardIndex) => (
         <div
+          id={`${cardIndex}`}
           key={card.id}
           className="mb-14 flex h-[60vh] w-full flex-col items-center lg:mb-0 lg:mt-32 lg:flex-row"
         >
