@@ -30,7 +30,7 @@ function Contacts() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async () => {
     const form = new FormData();
     form.append("name", formData.name);
     form.append("email", formData.email);
