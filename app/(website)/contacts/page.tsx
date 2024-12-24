@@ -54,7 +54,7 @@ function Contacts() {
 
   return (
     <div className="flex h-full w-full flex-col items-center text-white md:flex-row lg:justify-around">
-      <div className="mt-16 flex w-1/2 flex-col items-start gap-8 md:mt-0 md:gap-14 md:pr-8 lg:gap-20 lg:pr-10">
+      <div className="mt-16 flex w-full flex-col items-start gap-8 md:mt-0 md:w-1/2 md:gap-14 md:pr-8 lg:gap-20 lg:pr-10">
         <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">CONTACTS</h1>
         <p className="text-l self-stretch font-karla">
           You can get to know me better and see more of my works by visiting the
@@ -94,7 +94,7 @@ function Contacts() {
         </div>
       </div>
       <span className="my-10 w-full border-[1px] border-white/5 md:hidden"></span>
-      <div className="w-2/3 pl-8 font-karla lg:w-1/3 lg:pl-0">
+      <div className="w-full font-karla md:w-2/3 md:pl-8 lg:w-1/3 lg:pl-0">
         <form
           className="flex flex-col"
           action={handleSubmit}

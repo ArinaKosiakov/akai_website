@@ -77,7 +77,7 @@ function AdvancedCarousel({ type }: DisplayProp) {
               />
             </div>
           </div>
-          <div className="flex h-full w-full items-center justify-center overflow-hidden lg:w-[65%]">
+          <div className="mt-10 flex h-full w-full items-center justify-center overflow-hidden md:mt-0 lg:w-[65%]">
             <Image
               className="h-full w-auto rounded-lg object-contain"
               src={card.src[currentIndexes[cardIndex]]} // Use state specific to this card
