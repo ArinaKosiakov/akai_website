@@ -1,47 +1,25 @@
 import React from "react";
-import img from "../../public/sketches/13.jpg";
-import Image from "next/image";
+import sketches from "../images_paths/sketches";
+import illustrations from "../images_paths/illustrations";
+import Image, { StaticImageData } from "next/image";
 
 type DisplayProp = {
   type: string;
 };
 
+type ImagesArrayProp = {
+  title: string;
+  url: StaticImageData;
+  description: string;
+  date: string;
+};
+
 function Display({ type }: DisplayProp) {
-  const images = [
-    {
-      title: "Animals",
-      url: img,
-      description: "Practise of animal anatomy.",
-      date: "September 2024",
-    },
-    {
-      title: "Image",
-      url: img,
-      description: "Practise of animal anatomy.",
-      date: "September 2024",
-    },
-    {
-      title: "Image",
-      url: img,
-      description: "Practise of animal anatomy.",
-      date: "September 2024",
-    },
-    {
-      title: "Image",
-      url: img,
-      description: "Practise of animal anatomy.",
-      date: "September 2024",
-    },
-    {
-      title: "Image",
-      url: img,
-      description: "Practise of animal anatomy.",
-      date: "September 2024",
-    },
-  ];
+  const images = type === "sketchbook" ? sketches : illustrations;
+
   return (
     <div className="flex h-full flex-col items-center text-sm md:text-xl">
-      {images.map((image, index) => (
+      {images.map((image: ImagesArrayProp, index: number) => (
         <div
           key={index}
           className="w-100% mb-12 flex flex-col items-center md:max-w-[80%]"

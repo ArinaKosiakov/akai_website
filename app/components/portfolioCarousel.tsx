@@ -4,7 +4,7 @@ import React, { FC, RefObject, useEffect, useState } from "react";
 import { Card } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
-import bg from "../../public/homepage_imgs/env.jpg";
+import bg from "../../public/homepage_imgs/img1.jpg";
 import Link from "next/link";
 
 type CardData = {

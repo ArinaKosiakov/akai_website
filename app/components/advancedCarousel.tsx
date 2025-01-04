@@ -1,8 +1,8 @@
 "use client";
 import React, { RefObject, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import img from "../../public/homepage_imgs/projects.jpg";
-import img2 from "../../public/homepage_imgs/illustration.jpg";
+import img from "../../public/homepage_imgs/img1.jpg";
+import img2 from "../../public/homepage_imgs/img2.jpg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DotNavigator from "./dotNavigator";
 

@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import env from "../../public/homepage_imgs/env.jpg";
-import char from "../../public/homepage_imgs/characters.jpg";
-import ill from "../../public/illustration/sam.jpg";
-import pr from "../../public/concepts/kiri1.jpg";
+import images from "../images_paths/homepage";
 import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 
 const customTheme: CustomFlowbiteTheme["carousel"] = {
@@ -20,10 +17,9 @@ function HomepageCarousel() {
   return (
     <div className="h-full">
       <Carousel pauseOnHover indicators={false} theme={customTheme}>
-        <Image src={env} alt="..." />
-        <Image src={char} alt="..." />
-        <Image src={ill} alt="..." />
-        <Image src={pr} alt="..." />
+        {Object.values(images).map((src, index) => (
+          <Image src={src} key={index} alt="..." />
+        ))}
       </Carousel>
     </div>
   );
