@@ -1,9 +1,9 @@
 import s1 from "../../public/portfolio_imgs/illustrations/01.jpg";
 import s2 from "../../public/portfolio_imgs/illustrations/02.jpg";
 import s3 from "../../public/portfolio_imgs/illustrations/03.jpg";
-import s4 from "../../public/portfolio_imgs/illustrations/04.jpg";
+
 import s5 from "../../public/portfolio_imgs/illustrations/05.jpg";
-import s6 from "../../public/portfolio_imgs/illustrations/06.jpg";
+
 import s7 from "../../public/portfolio_imgs/illustrations/07.jpg";
 import s8 from "../../public/portfolio_imgs/illustrations/08.jpg";
 import s9 from "../../public/portfolio_imgs/illustrations/09.jpg";
@@ -16,7 +16,7 @@ import s15 from "../../public/portfolio_imgs/illustrations/15.jpg";
 import s16 from "../../public/portfolio_imgs/illustrations/16.jpg";
 import s17 from "../../public/portfolio_imgs/illustrations/17.jpg";
 
-const images = [
+const illustrations = [
   {
     title: "Color study",
     url: s7,
@@ -111,4 +111,4 @@ const images = [
   },
 ];
 
-export default images;
+export default illustrations;

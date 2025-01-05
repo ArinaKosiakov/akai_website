@@ -1,6 +1,4 @@
 import s1 from "../../public/portfolio_imgs/sketches/01.jpg";
-import s2 from "../../public/portfolio_imgs/sketches/02.jpg";
-import s3 from "../../public/portfolio_imgs/sketches/03.jpg";
 import s4 from "../../public/portfolio_imgs/sketches/04.jpg";
 import s5 from "../../public/portfolio_imgs/sketches/05.jpg";
 import s6 from "../../public/portfolio_imgs/sketches/06.jpg";
@@ -18,7 +16,7 @@ import s17 from "../../public/portfolio_imgs/sketches/17.jpg";
 import s18 from "../../public/portfolio_imgs/sketches/18.jpg";
 import s19 from "../../public/portfolio_imgs/sketches/19.jpg";
 
-const images = [
+const sketches = [
   {
     title: "Hands",
     url: s1,
@@ -118,4 +116,4 @@ const images = [
   },
 ];
 
-export default images;
+export default sketches;
