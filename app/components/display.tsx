@@ -10,7 +10,7 @@ type DisplayProp = {
 type ImagesArrayProp = {
   title: string;
   url: StaticImageData;
-  description: string;
+  description?: string;
   date: string;
 };
 
@@ -27,7 +27,7 @@ function Display({ type }: DisplayProp) {
           <Image
             src={image.url}
             alt={""}
-            className="h-auto max-w-[80%]"
+            className="h-auto max-w-[60%]"
           ></Image>
           <div className="mt-4 flex w-full flex-row justify-between">
             <span className="text-white text-opacity-70">

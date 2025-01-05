@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import my_photo from "../../../public/pfp.jpg";
-import thisisme from "@/public/thisisme.png";
+import my_photo from "../../../public/aboutme/pfp.jpg";
+import thisisme from "@/public/aboutme/thisisme.png";
 import HorizontalTimeline from "@/app/components/timeline";
 import { ls } from "../../i18n/translations";
 import MySlider from "@/app/components/mySlider";

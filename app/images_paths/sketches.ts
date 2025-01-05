@@ -20,13 +20,13 @@ import s19 from "../../public/portfolio_imgs/sketches/19.jpg";
 
 const images = [
   {
-    title: "Anatomy",
+    title: "Hands",
     url: s1,
     description: "Practice of hand anatomy.",
     date: "September 2023",
   },
   {
-    title: "Anatomy",
+    title: "Hands and Feet",
     url: s4,
     description: "Practise of hand and feet anatomy.",
     date: "September 2023",
@@ -93,27 +93,27 @@ const images = [
     date: "January 2024",
   },
   {
-    title: "Animal anatomy",
+    title: "Cats and dogs",
     url: s12,
-    description: "Cats and dogs.",
+    description: "Animal anatomy studies.",
     date: "March 2024",
   },
   {
-    title: "Animal anatomy",
+    title: "Rats",
     url: s13,
-    description: "Rats.",
+    description: "Animal anatomy studies.",
     date: "March 2024",
   },
   {
-    title: "Animal anatomy",
+    title: "Turtles",
     url: s14,
-    description: "Turtles.",
+    description: "Animal anatomy studies.",
     date: "March 2024",
   },
   {
-    title: "Animal anatomy",
+    title: "Penguins",
     url: s15,
-    description: "Penguin.",
+    description: "Animal anatomy studies.",
     date: "March 2024",
   },
 ];
