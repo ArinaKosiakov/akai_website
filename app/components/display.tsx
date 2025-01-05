@@ -1,6 +1,6 @@
 import React from "react";
 import sketches from "../images_paths/sketches";
-import illustrations from "../images_paths/illustrations";
+//import illustrations from "../images_paths/illustrations";
 import Image, { StaticImageData } from "next/image";
 
 type DisplayProp = {
@@ -10,12 +10,13 @@ type DisplayProp = {
 type ImagesArrayProp = {
   title: string;
   url: StaticImageData;
-  description?: string;
+  description: string;
   date: string;
 };
 
 function Display({ type }: DisplayProp) {
-  const images = type === "sketchbook" ? sketches : illustrations;
+  //const images = type === "sketchbook" ? sketches : illustrations;
+  const images = sketches;
 
   return (
     <div className="flex h-full flex-col items-center text-sm md:text-xl">
