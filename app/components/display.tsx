@@ -22,6 +22,7 @@ function Display({ type }: DisplayProp) {
     <div className="flex h-full flex-col items-center text-sm md:text-xl">
       {images.map((image: ImagesArrayProp, index: number) => (
         <div
+          id={`${index}`}
           key={index}
           className="w-100% mb-12 flex flex-col items-center md:max-w-[80%]"
         >

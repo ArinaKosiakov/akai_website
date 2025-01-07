@@ -25,8 +25,44 @@ const karla = Karla({
 });
 
 export const metadata = {
-  title: "DullAkai",
-  description: "Personal webpage",
+  keywords: "digitalart, art, conceptart, environment,design",
+  title: {
+    template: "DullAkai - %s",
+    default: "DullAkai - Environment designer / Digital artist",
+  },
+  description:
+    "I'm a digital artist from Italy. This is my digital portfolio where all of my most recent and best works are displayed. ",
+  metadataBase: new URL("https://www.dullakai.com"),
+  openGraph: {
+    images: {
+      url: "/logos/og-image.png",
+      width: 1280,
+      height: 800,
+    },
+  },
+  icons: {
+    icon: {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon/favicon-32x32.png",
+    },
+    shortcut: "/favicon/favicon.ico",
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/images/favicon/favicon-16x16.png",
+      },
+    ],
+    apple: {
+      url: "/images/favicon/apple-touch-icon.png",
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      type: "image/png",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +72,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${eiko.variable} ${karla.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="font-pfd flex h-[100dvh] flex-col bg-custom_gray-700 font-normal">
         <Navbar />
         <ToastContainer position="top-right" />
