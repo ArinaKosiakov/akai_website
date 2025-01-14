@@ -113,8 +113,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
               renderImage={() => (
                 <Image width={500} height={250} src={card.src} alt="image 1" />
               )}
-              href={`/portfolio/${type}/#${index}`}
-              // href={`/portfolio/illustrations`}
+              href={`/portfolio/${type}/#${index + 1}`}
             >
               {/* <Image src={card.src} alt="image" width={500} height={2500} /> */}
               <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">

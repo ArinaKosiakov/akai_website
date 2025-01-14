@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import CardCarousel from "@/app/components/portfolioCarousel";
+import CardCarousel from "@/app/components/portfolioSlider";
 import { FaArrowRight } from "react-icons/fa";
 
 function Portfolio() {

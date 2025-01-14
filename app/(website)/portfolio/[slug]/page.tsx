@@ -1,5 +1,5 @@
-import AdvancedCarousel from "@/app/components/advancedCarousel";
-import Display from "@/app/components/display";
+import AdvancedCarousel from "@/app/components/ProjectsDisplay";
+import Display from "@/app/components/SimpleDisplay";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;

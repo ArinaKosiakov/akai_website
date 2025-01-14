@@ -1,6 +1,7 @@
-import { display_images } from "./display-schema";
-import project from "./project-schema";
+import { artwork } from "./artwork";
+import { groups } from "./groupedProjects";
+import { projects } from "./projects";
 
-const schemas = [project, display_images];
+const schemas = [artwork, groups, projects];
 
 export default schemas;
