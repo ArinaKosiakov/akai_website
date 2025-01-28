@@ -5,6 +5,8 @@ import Footer from "../components/footer";
 import localFont from "next/font/local";
 import { Karla } from "next/font/google";
 
+import { SanityLive } from "../(sanity)/live";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

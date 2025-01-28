@@ -3,7 +3,6 @@ import Image from "next/image";
 import my_photo from "../../../public/aboutme/pfp.jpg";
 import thisisme from "@/public/aboutme/thisisme.png";
 import HorizontalTimeline from "@/app/components/timeline";
-import { ls } from "../../i18n/translations";
 import MySlider from "@/app/components/SkillSlider";
 
 function AboutMe() {

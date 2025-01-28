@@ -10,6 +10,11 @@ export const projects = defineType({
       title: "Title",
     },
     {
+      name: "description",
+      type: "text",
+      title: "Description",
+    },
+    {
       name: "category",
       type: "string",
       title: "Category",
@@ -21,9 +26,26 @@ export const projects = defineType({
       },
     },
     {
-      name: "image",
-      type: "image",
-      title: "Image",
+      name: "images",
+      type: "array",
+      title: "Images",
+      of: [
+        {
+          name: "image",
+          type: "image",
+          title: "Image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative text",
+            },
+          ],
+        },
+      ],
     },
   ],
 });

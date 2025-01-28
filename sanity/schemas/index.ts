@@ -1,7 +1,7 @@
 import { artwork } from "./artwork";
-import { groups } from "./groupedProjects";
+
 import { projects } from "./projects";
 
-const schemas = [artwork, groups, projects];
+const schemas = [artwork, projects];
 
 export default schemas;
