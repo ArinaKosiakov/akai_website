@@ -4,60 +4,13 @@ import React, { FC, RefObject, useEffect, useState } from "react";
 import { Card } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
-import bg from "../../public/homepage_imgs/img1.jpg";
-import Link from "next/link";
+import { CardCarouselProps } from "../../types/Content";
 
-type CardData = {
-  title: string;
-  description: string;
-  src: StaticImageData;
-  id?: string;
-};
-
-type CardCarouselProps = {
-  type: string;
-  cards?: CardData[];
-};
-
-const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
+const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
   const carouselRef: RefObject<HTMLDivElement> = React.useRef(null);
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const cards: CardData[] = [
-    {
-      title: "Card 1",
-      description: "Description for card 1",
-      src: bg,
-    },
-    {
-      title: "Card 2",
-      description: "Description for card 2",
-      src: bg,
-    },
-    {
-      title: "Card 3",
-      description: "Description for card 3",
-      src: bg,
-    },
-    {
-      title: "Card 4",
-      description: "Description for card 4",
-      src: bg,
-    },
-    {
-      title: "Card 5",
-      description: "Description for card 4",
-      src: bg,
-    },
-    {
-      title: "Card 6",
-      description: "Description for card 4",
-      src: bg,
-      id: "",
-    },
-  ];
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
@@ -111,7 +64,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type }) => {
             <Card
               className="border-none"
               renderImage={() => (
-                <Image width={500} height={250} src={card.src} alt="image 1" />
+                <Image width={500} height={240} src={card.src!} alt="image 1" />
               )}
               href={`/portfolio/${type}/#${index + 1}`}
             >

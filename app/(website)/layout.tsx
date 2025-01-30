@@ -93,6 +93,7 @@ export default function RootLayout({
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
           async
         />
+        <SanityLive />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import { Project } from "@/types/Projects";
 import { createClient, groq } from "next-sanity";
+import imageUrlBuilder from "@sanity/image-url";
 
 export async function getProjects(): Promise<Project[]> {
   const client = createClient({
