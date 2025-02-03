@@ -64,7 +64,12 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
             <Card
               className="border-none"
               renderImage={() => (
-                <Image width={500} height={240} src={card.src!} alt="image 1" />
+                <Image
+                  width={500}
+                  height={250}
+                  src={card.src || ""}
+                  alt="image 1"
+                />
               )}
               href={`/portfolio/${type}/#${index + 1}`}
             >
