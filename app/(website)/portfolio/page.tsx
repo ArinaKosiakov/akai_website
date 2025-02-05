@@ -7,11 +7,11 @@ import src from "../../../public/homepage_imgs/img1.jpg";
 import { getCards } from "@/sanity/sanity-utils";
 
 async function Portfolio() {
-  const projectCards = [];
-  const envCards = [];
-  const sketchesCards = await getCards("artwork", "sketches");
-  const illCards = await getCards("artwork", "illustrations");
-  const cards = await getCards("artwork", "illustrations");
+  const projectCards = await getCards("project", "project");
+  const envCards = await getCards("project", "environment");
+  const sketchesCards = await getCards("artwork", "sketch");
+  const illCards = await getCards("artwork", "illustration");
+  const cards = await getCards("artwork", "illustration");
 
   return (
     <div className="flex h-full flex-col justify-center px-[5%]">
@@ -22,7 +22,7 @@ async function Portfolio() {
             <FaArrowRight className="mt-[2px]" />
           </div>
         </Link>
-        <CardCarousel type="projects" cards={cards} />
+        <CardCarousel type="projects" cards={projectCards} />
       </div>
       <div className="mb-24">
         <Link href={"/portfolio/environments"}>
@@ -31,7 +31,7 @@ async function Portfolio() {
             <FaArrowRight className="mt-[2px]" />
           </div>
         </Link>
-        <CardCarousel type="environments" cards={cards} />
+        <CardCarousel type="environments" cards={envCards} />
       </div>
       <div className="mb-24">
         <Link href={"/portfolio/sketchbook"}>

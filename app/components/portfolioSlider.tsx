@@ -77,9 +77,9 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
               <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {card.title}
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
+              {/* <p className="font-normal text-gray-700 dark:text-gray-400">
                 {card.description}
-              </p>
+              </p> */}
             </Card>
           </div>
         ))}

@@ -30,9 +30,9 @@ export async function getCards(
   type: string,
   category: string,
 ): Promise<CardData[]> {
+  const params = { type: `${type}`, category: `${category}` };
   const IMG_QUERY = defineQuery(
     `*[_type==$type && category==$category]{title, category, description, year, image}`,
-    { type, category }, // Pass variables as parameters
   );
 
   const client = createClient({
@@ -48,7 +48,10 @@ export async function getCards(
       ? imageUrlBuilder({ projectId, dataset }).image(source)
       : null;
 
-  const { data: events } = await sanityFetch({ query: IMG_QUERY });
+  const { data: events } = await sanityFetch({
+    query: IMG_QUERY,
+    params,
+  });
   console.log(events);
 
   const cards = events.map((event) => {
@@ -56,6 +59,7 @@ export async function getCards(
     const card: CardData = {
       title: event.title,
       description: event.description,
+      year: event.year,
       src: url,
     };
     return card;

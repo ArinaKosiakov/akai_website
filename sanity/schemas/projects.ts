@@ -26,6 +26,11 @@ export const projects = defineType({
       },
     },
     {
+      name: "image",
+      type: "image",
+      title: "Thumbnail",
+    },
+    {
       name: "images",
       type: "array",
       title: "Images",
