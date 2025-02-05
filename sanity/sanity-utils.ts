@@ -1,30 +1,17 @@
 import { Project } from "@/types/Projects";
 import { createClient, defineQuery, groq } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { CardData } from "@/types/Content";
+import { CardData, ImagesProps } from "@/types/Content";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { sanityFetch } from "@/app/(sanity)/live";
+import { get } from "http";
+import { StaticImageData } from "next/image";
 
-export async function getProjects(): Promise<Project[]> {
-  const client = createClient({
-    projectId: "cly2k8p2",
-    dataset: "production",
-    apiVersion: "2021-10-21",
-  });
-
-  return await client.fetch(
-    groq`*[_type == "project"]{
-          _id,
-          _createdAt,
-          name,
-          "slug": slug.current,
-          "image": image.asset->url,
-          "alt": image.alt,
-          url,
-          content
-        }`,
-  );
-}
+const client = createClient({
+  projectId: "cly2k8p2",
+  dataset: "production",
+  apiVersion: "2021-10-21",
+});
 
 export async function getCards(
   type: string,
@@ -34,12 +21,6 @@ export async function getCards(
   const IMG_QUERY = defineQuery(
     `*[_type==$type && category==$category]{title, category, description, year, image}`,
   );
-
-  const client = createClient({
-    projectId: "cly2k8p2",
-    dataset: "production",
-    apiVersion: "2021-10-21",
-  });
 
   const { projectId, dataset } = client.config();
 
@@ -52,7 +33,7 @@ export async function getCards(
     query: IMG_QUERY,
     params,
   });
-  console.log(events);
+  // console.log(events);
 
   const cards = events.map((event) => {
     const url = urlImages(event.image)?.url();
@@ -65,4 +46,25 @@ export async function getCards(
     return card;
   });
   return cards;
+}
+
+export async function getImagesUrl(): Promise<string[]> {
+  const IMG_QUERY = defineQuery(`*[_type=="homepage_imgs"]{category, image}`);
+  const { projectId, dataset } = client.config();
+
+  const urlImages = (source: SanityImageSource) =>
+    projectId && dataset
+      ? imageUrlBuilder({ projectId, dataset }).image(source)
+      : null;
+
+  const { data: events } = await sanityFetch({
+    query: IMG_QUERY,
+  });
+  // console.log(events);
+
+  const imgs_urls: string[] = events.map((event) => {
+    const url = urlImages(event.image)?.url();
+    return url;
+  });
+  return imgs_urls;
 }

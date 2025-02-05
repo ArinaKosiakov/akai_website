@@ -4,7 +4,7 @@ export class EN {
   homepage = {
     title: "Crafting Worlds, One Brushstroke at a Time",
     subtitle:
-      "Concept Artist & Environment Designer | If you can think it I can make it real.",
+      "Concept Artist & Illustrator | If you can think it I can make it real.",
   };
   navbar = {
     portfolio: "Portfolio",

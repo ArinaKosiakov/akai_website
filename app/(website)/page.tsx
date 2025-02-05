@@ -1,10 +1,14 @@
-"use client";
 import { ls } from "../i18n/translations";
 import HomepageCarousel from "../components/homepageCarousel";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import images from "../images_paths/homepage";
 import Link from "next/link";
+import { getImagesUrl } from "@/sanity/sanity-utils";
 
-function Home() {
+async function Home() {
+  const imgs = await getImagesUrl();
+  console.log(imgs[0]);
+
   return (
     <main className="flex h-full flex-col items-center justify-center bg-custom_gray-700 pl-[2%] text-xl text-white scrollbar-hide">
       {/* hero section */}
@@ -18,7 +22,7 @@ function Home() {
       </div>
       {/* view of the main projects */}
       <div className="h-1/3 w-full md:mt-6 md:w-4/5 lg:h-4/5">
-        <HomepageCarousel />
+        <HomepageCarousel imgs={imgs} />
       </div>
       <div className="flex w-full justify-end">
         <Link

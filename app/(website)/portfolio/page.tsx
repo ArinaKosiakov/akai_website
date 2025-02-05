@@ -11,7 +11,7 @@ async function Portfolio() {
   const envCards = await getCards("project", "environment");
   const sketchesCards = await getCards("artwork", "sketch");
   const illCards = await getCards("artwork", "illustration");
-  const cards = await getCards("artwork", "illustration");
+  // const cards = await getCards("artwork", "illustration");
 
   return (
     <div className="flex h-full flex-col justify-center px-[5%]">

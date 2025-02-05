@@ -77,10 +77,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="font-pfd flex h-[100dvh] flex-col bg-custom_gray-700 font-normal">
+      <body className="font-pfd flex h-[100vh] flex-col bg-custom_gray-700 font-normal">
         <Navbar />
         <ToastContainer position="top-right" />
-        <div className="mx-auto my-3 w-9/12 flex-1">{children}</div>
+        <div className="mx-auto my-3 h-full w-9/12 flex-1 overflow-y-scroll scrollbar-hide">
+          {children}
+        </div>
         <Footer />
 
         <script
