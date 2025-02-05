@@ -7,7 +7,6 @@ import { getImagesUrl } from "@/sanity/sanity-utils";
 
 async function Home() {
   const imgs = await getImagesUrl();
-  console.log(imgs[0]);
 
   return (
     <main className="flex h-full flex-col items-center justify-center bg-custom_gray-700 pl-[2%] text-xl text-white scrollbar-hide">
