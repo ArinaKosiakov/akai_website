@@ -65,8 +65,8 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
               className="border-none"
               renderImage={() => (
                 <Image
-                  width={500}
-                  height={250}
+                  width={300}
+                  height={300}
                   src={card.src || ""}
                   alt="image 1"
                 />

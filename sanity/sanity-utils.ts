@@ -1,11 +1,9 @@
 import { Project } from "@/types/Projects";
 import { createClient, defineQuery, groq } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { CardData, ImagesProps } from "@/types/Content";
+import { CardData, ProjectsProps } from "@/types/Content";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { sanityFetch } from "@/app/(sanity)/live";
-import { get } from "http";
-import { StaticImageData } from "next/image";
 
 const client = createClient({
   projectId: "cly2k8p2",
@@ -67,4 +65,41 @@ export async function getImagesUrl(): Promise<string[]> {
     return url;
   });
   return imgs_urls;
+}
+
+export async function getProjects(category: string): Promise<ProjectsProps[]> {
+  const params = { category: `${category}` };
+  const IMG_QUERY = defineQuery(
+    `*[_type=="project" && category==$category]{title, description, images}`,
+  );
+  const { projectId, dataset } = client.config();
+
+  const { data: events } = await sanityFetch({
+    query: IMG_QUERY,
+    params,
+  });
+
+  const cards = events.map((event) => {
+    const urlImages = (source: SanityImageSource) =>
+      projectId && dataset
+        ? imageUrlBuilder({ projectId, dataset }).image(source)
+        : null;
+    const imgs = event.images;
+    console.log(imgs);
+
+    const url = imgs.map((img) => {
+      const url = urlImages(img)?.url();
+      return url;
+    });
+    console.log(url);
+
+    const card: CardData = {
+      title: event.title,
+      description: event.description,
+      year: event.year,
+      src: url,
+    };
+    return card;
+  });
+  return cards;
 }

@@ -5,39 +5,17 @@ import img from "../../public/homepage_imgs/img1.jpg";
 import img2 from "../../public/homepage_imgs/img2.jpg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DotNavigator from "./dotNavigator";
+import { getProjects } from "@/sanity/sanity-utils";
+import { ProjectsProps } from "@/types/Content";
 
-type DisplayProp = {
-  type: string;
-};
-
-type SingleProject = {
-  title: string;
-  description: string;
-  src: StaticImageData[];
-};
-
-const cards: SingleProject[] = [
-  {
-    title: "Card 1",
-    description: "Description for card 1",
-    src: [img, img2, img],
-  },
-  {
-    title: "Card 2",
-    description: "Description for card 2",
-    src: [img, img2, img],
-  },
-  {
-    title: "Card 3",
-    description: "Description for card 3",
-    src: [img2, img2, img],
-  },
-];
-
-function AdvancedCarousel({ type }: DisplayProp) {
+function AdvancedCarousel(
+  { type }: { type: string },
+  { projects }: { projects: ProjectsProps[] },
+) {
+  const category = type === "projects" ? "project" : "illustration";
   // State to track the current index for each card
   const [currentIndexes, setCurrentIndexes] = useState<number[]>(
-    cards.map(() => 0), // Initialize all cards to index 0
+    projects.map(() => 0), // Initialize all projects to index 0
   );
 
   const handleNavigation = (cardIndex: number, imageIndex: number): void => {
@@ -47,10 +25,9 @@ function AdvancedCarousel({ type }: DisplayProp) {
       ),
     );
   };
-
   return (
     <div className="mb-12 w-full">
-      {cards.map((card, cardIndex) => (
+      {projects.map((card, cardIndex) => (
         <div
           id={`${cardIndex + 1}`}
           key={cardIndex}
@@ -66,7 +43,7 @@ function AdvancedCarousel({ type }: DisplayProp) {
             </span>
             <div className="flex w-full flex-row items-center justify-center lg:justify-start">
               <DotNavigator
-                src_arr={card.src}
+                src_arr={card.src!}
                 onNavigate={(imageIndex) =>
                   handleNavigation(cardIndex, imageIndex)
                 }

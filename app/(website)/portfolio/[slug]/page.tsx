@@ -1,5 +1,6 @@
 import AdvancedCarousel from "@/app/components/ProjectsDisplay";
 import Display from "@/app/components/SimpleDisplay";
+import { getProjects } from "@/sanity/sanity-utils";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
@@ -43,7 +44,7 @@ interface PageProps {
   };
 }
 
-export default function PortfolioPage(props: PageProps) {
+export default async function PortfolioPage(props: PageProps) {
   const { params } = props;
   let isTrue: boolean;
 
@@ -56,6 +57,9 @@ export default function PortfolioPage(props: PageProps) {
   params.slug === "projects" || params.slug === "environments"
     ? (isTrue = true)
     : (isTrue = false);
+
+  const projects = await getProjects("project");
+  const envs = await getProjects("environment");
 
   return (
     <div>
