@@ -85,13 +85,13 @@ export async function getProjects(category: string): Promise<ProjectsProps[]> {
         ? imageUrlBuilder({ projectId, dataset }).image(source)
         : null;
     const imgs = event.images;
-    console.log(imgs);
+    // console.log(imgs);
 
     const url = imgs.map((img) => {
       const url = urlImages(img)?.url();
       return url;
     });
-    console.log(url);
+    // console.log(url);
 
     const card: CardData = {
       title: event.title,
@@ -101,5 +101,7 @@ export async function getProjects(category: string): Promise<ProjectsProps[]> {
     };
     return card;
   });
+  console.log(cards);
+
   return cards;
 }

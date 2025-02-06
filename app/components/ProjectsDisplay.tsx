@@ -8,11 +8,12 @@ import DotNavigator from "./dotNavigator";
 import { getProjects } from "@/sanity/sanity-utils";
 import { ProjectsProps } from "@/types/Content";
 
-function AdvancedCarousel(
-  { type }: { type: string },
-  { projects }: { projects: ProjectsProps[] },
-) {
-  const category = type === "projects" ? "project" : "illustration";
+type CarouselProps = {
+  type: string;
+  projects: ProjectsProps[];
+};
+
+function AdvancedCarousel({ type, projects }: CarouselProps) {
   // State to track the current index for each card
   const [currentIndexes, setCurrentIndexes] = useState<number[]>(
     projects.map(() => 0), // Initialize all projects to index 0
@@ -55,6 +56,8 @@ function AdvancedCarousel(
               className="h-full w-auto rounded-lg object-contain"
               src={card.src[currentIndexes[cardIndex]]} // Use state specific to this card
               alt=""
+              width={500}
+              height={500}
             />
           </div>
         </div>

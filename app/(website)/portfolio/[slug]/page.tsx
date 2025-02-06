@@ -58,14 +58,15 @@ export default async function PortfolioPage(props: PageProps) {
     ? (isTrue = true)
     : (isTrue = false);
 
-  const projects = await getProjects("project");
-  const envs = await getProjects("environment");
+  const projects = await getProjects(
+    params.slug === "projects" ? "project" : "environment",
+  );
 
   return (
     <div>
       {isTrue ? (
         <div>
-          <AdvancedCarousel type={params.slug} />
+          <AdvancedCarousel type={params.slug} projects={projects} />
         </div>
       ) : (
         <div>
