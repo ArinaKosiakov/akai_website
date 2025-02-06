@@ -1,11 +1,7 @@
 "use client";
 import React, { RefObject, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import img from "../../public/homepage_imgs/img1.jpg";
-import img2 from "../../public/homepage_imgs/img2.jpg";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DotNavigator from "./dotNavigator";
-import { getProjects } from "@/sanity/sanity-utils";
 import { ProjectsProps } from "@/types/Content";
 
 type CarouselProps = {
@@ -36,12 +32,7 @@ function AdvancedCarousel({ type, projects }: CarouselProps) {
         >
           <div className="flex h-full w-full flex-col items-start justify-center gap-8 lg:w-[35%] lg:pl-8 lg:pr-12">
             <span className="font-eiko text-2xl">{card.title}</span>
-            <span>
-              {card.description} Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Perferendis aliquid labore velit, a voluptate
-              officiis impedit vero incidunt, iusto odit earum sunt eius omnis!
-              Doloribus eveniet amet assumenda debitis iure.
-            </span>
+            <span>{card.description}</span>
             <div className="flex w-full flex-row items-center justify-center lg:justify-start">
               <DotNavigator
                 src_arr={card.src!}

@@ -5,8 +5,6 @@ import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
-type PageType = "environemnts" | "illustrations" | "sketchbook" | "projects";
-
 export async function generateStaticParams() {
   const slugs = ["environments", "illustrations", "sketchbook", "projects"];
 

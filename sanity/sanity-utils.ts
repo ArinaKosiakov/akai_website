@@ -1,4 +1,3 @@
-import { Project } from "@/types/Projects";
 import { createClient, defineQuery, groq } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { CardData, ProjectsProps } from "@/types/Content";

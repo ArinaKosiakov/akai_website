@@ -9,6 +9,7 @@ function Navbar() {
   let Links = [
     { name: "Portfolio", link: "/portfolio" },
     { name: "About me", link: "/about" },
+    { name: "Commissions", link: "/commissions" },
     { name: "Contacts", link: "/contacts" },
   ];
 
