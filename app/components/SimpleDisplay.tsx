@@ -1,5 +1,4 @@
 import React from "react";
-import sketches from "../images_paths/sketches";
 //import illustrations from "../images_paths/illustrations";
 import Image, { getImageProps, StaticImageData } from "next/image";
 import { CardData } from "@/types/Content";

@@ -8,13 +8,17 @@ function Footer() {
       name: "Instagram",
       link: "https://www.instagram.com/dull.akai/",
     },
-    {
-      name: "Twitch",
-      link: "https://www.twitch.tv/dullakai",
-    },
+    // {
+    //   name: "Twitch",
+    //   link: "https://www.twitch.tv/dullakai",
+    // },
     {
       name: "ArtStation",
       link: "https://dullakai.artstation.com/",
+    },
+    {
+      name: "YouTube",
+      link: "https://youtube.com/@dullakaii",
     },
   ];
 
@@ -33,7 +37,9 @@ function Footer() {
               className="px-3 hover:cursor-pointer hover:text-white"
               key={link.name}
             >
-              {link.name}
+              <Link target="blank" href={link.link}>
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>

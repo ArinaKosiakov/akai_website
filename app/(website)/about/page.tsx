@@ -55,7 +55,7 @@ function AboutMe() {
           />
         </div>
       </div>
-      <div className="mb-10 mt-20">
+      <div className="mb-10 mt-10 h-8">
         <MySlider />
       </div>
     </div>

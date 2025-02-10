@@ -1,7 +1,6 @@
 import { ls } from "../i18n/translations";
 import HomepageCarousel from "../components/homepageCarousel";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import images from "../images_paths/homepage";
 import Link from "next/link";
 import { getImagesUrl } from "@/sanity/sanity-utils";
 
@@ -9,9 +8,9 @@ async function Home() {
   const imgs = await getImagesUrl();
 
   return (
-    <main className="flex h-full flex-col items-center justify-center bg-custom_gray-700 pl-[2%] text-xl text-white scrollbar-hide">
+    <main className="flex h-full flex-col items-center justify-center pl-[2%] text-xl text-white scrollbar-hide">
       {/* hero section */}
-      <div className="mb-12 flex h-fit flex-col items-center justify-center bg-custom_gray-700 pb-3 lg:mb-0">
+      <div className="mb-12 flex h-fit flex-col items-center justify-center pb-3 lg:mb-0">
         <p className="text-center font-eiko text-3xl md:text-4xl lg:text-5xl">
           {ls.homepage.title}
         </p>

@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
-export const pricelist = defineType({
-  name: "pricelist",
+export const price = defineType({
+  name: "price",
   type: "document",
-  title: "Pricelist",
+  title: "Price",
   fields: [
     {
       name: "title",
@@ -19,6 +19,11 @@ export const pricelist = defineType({
       name: "price",
       type: "number",
       title: "Price",
+    },
+    {
+      name: "currency",
+      type: "string",
+      title: "Currency",
     },
     {
       name: "image",

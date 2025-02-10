@@ -1,10 +1,11 @@
 import { defineType } from "sanity";
-export const Reviews = defineType({
-  name: "Reviews",
+export const review = defineType({
+  name: "review",
   type: "document",
-  title: "Reviews",
+  title: "Review",
   fields: [
     { name: "name", type: "string", title: "Customer's name" },
+    { name: "avatar", type: "image", title: "Avatar" },
     { name: "review", type: "string", title: "Review" },
     { name: "image", type: "image", title: "Image" },
   ],
