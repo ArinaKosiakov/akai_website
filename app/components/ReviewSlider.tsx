@@ -1,16 +1,26 @@
 "use client";
-import { getCommissions } from "@/sanity/sanity-utils";
 import { ReviewProps } from "@/types/Content";
 import { Card } from "flowbite-react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-infinite-logo-slider";
 
 function ReviewSlider({ reviews }: { reviews: ReviewProps[] }) {
+  const [expandedReviews, setExpandedReviews] = useState<{
+    [key: number]: boolean;
+  }>({});
+
+  const toggleExpand = (index: number) => {
+    setExpandedReviews((prev) => ({
+      ...prev,
+      [index]: !prev[index], // Toggle the state for the specific review
+    }));
+  };
+
   return (
     <Slider
       pauseOnHover={true}
-      width="500px"
+      width="400px"
       blurBorders={true}
       blurBorderColor={"#3f4041"}
     >
@@ -28,18 +38,19 @@ function ReviewSlider({ reviews }: { reviews: ReviewProps[] }) {
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                 {r.name}
               </h5>
-              <span className="h-[100px] text-sm text-gray-500 dark:text-gray-400">
-                {r.review}
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {expandedReviews[idx]
+                  ? r.review
+                  : `${r.review.substring(0, 50)}... `}
+                {r.review.length > 50 && (
+                  <button
+                    className="ml-2 text-akai-900 hover:underline"
+                    onClick={() => toggleExpand(idx)}
+                  >
+                    {expandedReviews[idx] ? "Read less" : "Read more"}
+                  </button>
+                )}
               </span>
-              {/* <div className="mt-4 flex space-x-3 lg:mt-6">
-                <Image
-                  alt=""
-                  height="96"
-                  src={r.image_url!}
-                  width="96"
-                  className="mb-3 shadow-lg"
-                />
-              </div> */}
             </div>
           </Card>
         </Slider.Slide>

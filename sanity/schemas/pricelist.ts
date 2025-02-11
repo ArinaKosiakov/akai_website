@@ -1,3 +1,4 @@
+import { options } from "prettier-plugin-tailwindcss";
 import { defineType } from "sanity";
 export const price = defineType({
   name: "price",
@@ -14,6 +15,15 @@ export const price = defineType({
       name: "description",
       type: "text",
       title: "Description",
+    },
+    {
+      name: "options",
+      type: "array",
+      title: "Options",
+      of: [{ type: "string" }],
+      options: {
+        layout: "tags",
+      },
     },
     {
       name: "price",

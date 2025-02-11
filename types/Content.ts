@@ -30,10 +30,11 @@ export type PricesProps = {
   description: string;
   currency: string;
   image_url: string | undefined;
+  options: string[] | undefined;
 };
 export type ReviewProps = {
   name: string;
   review: string;
-  image_url: string | undefined;
+  image_url?: string | undefined;
   avatar_url: string | undefined;
 };

@@ -5,7 +5,12 @@ export const review = defineType({
   title: "Review",
   fields: [
     { name: "name", type: "string", title: "Customer's name" },
-    { name: "avatar", type: "image", title: "Avatar" },
+    {
+      name: "avatar",
+      type: "image",
+      title: "Avatar",
+      options: { hotspot: true },
+    },
     { name: "review", type: "string", title: "Review" },
     { name: "image", type: "image", title: "Image" },
   ],

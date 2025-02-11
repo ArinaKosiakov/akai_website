@@ -147,5 +147,111 @@
     "name": "homepage_imgs",
     "type": "document",
     "title": "Homepage Images"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Customer's name"
+      },
+      {
+        "name": "avatar",
+        "type": "image"
+      },
+      {
+        "name": "review",
+        "type": "string"
+      },
+      {
+        "name": "image",
+        "type": "image"
+      }
+    ],
+    "name": "review",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "layout": "tags"
+        },
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "options",
+        "type": "array"
+      },
+      {
+        "name": "price",
+        "type": "number"
+      },
+      {
+        "name": "currency",
+        "type": "string"
+      },
+      {
+        "name": "image",
+        "type": "image"
+      }
+    ],
+    "name": "price",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "subtitle",
+        "type": "boolean",
+        "title": "Commission status"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "review"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to review"
+          }
+        ],
+        "name": "reviews",
+        "type": "array"
+      },
+      {
+        "of": [
+          {
+            "to": [
+              {
+                "type": "price"
+              }
+            ],
+            "type": "reference",
+            "title": "Reference to price"
+          }
+        ],
+        "name": "prices",
+        "type": "array"
+      }
+    ],
+    "name": "commissions",
+    "type": "document"
   }
 ]

@@ -85,7 +85,7 @@ function Contacts() {
             <Tree size={32} />
           </Link>
           <Link
-            className="cursor-pointer text-2xl text-akai-500 hover:text-akai-200"
+            className="cursor-pointer text-2xl text-akai-500 hover:text-white"
             href={"https://www.artstation.com/dullakai"}
             target="_blank"
           >

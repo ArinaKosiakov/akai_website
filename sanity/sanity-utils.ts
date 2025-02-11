@@ -121,7 +121,7 @@ export async function getCommissions(): Promise<CommissionProps> {
     `*[_type == "commissions"] {
   title, subtitle,
   "reviews": reviews[]->{image,name,avatar,review},
-  "prices": prices[]->{title,description,price,currency,image},
+  "prices": prices[]->{title,description,price,currency,image,options},
 }`,
   );
   const { projectId, dataset } = client.config();
@@ -135,7 +135,7 @@ export async function getCommissions(): Promise<CommissionProps> {
       const rev = {
         name: obj.name,
         review: obj.review,
-        image_url: urlImages(obj.image, projectId, dataset)?.url(),
+        // image_url: urlImages(obj.image, projectId, dataset)?.url(),
         avatar_url: urlImages(obj.avatar, projectId, dataset)?.url(),
       };
       return rev;
@@ -150,6 +150,7 @@ export async function getCommissions(): Promise<CommissionProps> {
         description: obj.description,
         currency: obj.currency,
         image_url: urlImages(obj.image, projectId, dataset)?.url(),
+        options: obj.options,
       };
       return rev;
     });
@@ -164,7 +165,7 @@ export async function getCommissions(): Promise<CommissionProps> {
     pricelist: newPrices(e.prices),
   };
 
-  // console.log(commission);
+  console.log(commission);
 
   return commission;
 }

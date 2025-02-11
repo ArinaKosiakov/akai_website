@@ -8,16 +8,18 @@ import { HiLockClosed, HiLockOpen } from "react-icons/hi";
 //api call to get the reviews from sanity
 
 async function Commissions() {
-  const { title, subtitle, reviews, pricelist } = await getCommissions();
+  const { subtitle, reviews, pricelist } = await getCommissions();
 
   return (
     <div className="flex h-full w-full flex-col items-center text-xl text-white">
-      <div className="flex flex-col items-center justify-center pb-10 pt-2 text-lg opacity-100 lg:text-xl">
+      <div className="mb-16 flex flex-col items-center justify-center pt-2 text-lg opacity-100 lg:text-xl">
         {subtitle ? (
           <div className="flex flex-col items-center">
-            <div className="flex flex-row items-center justify-center gap-2">
-              Commissions open <HiLockOpen />
-            </div>
+            <Link href={"/contacts"}>
+              <div className="flex flex-row items-center justify-center gap-2 rounded-md bg-custom_gray-400 px-10 hover:bg-custom_gray-500">
+                Commissions open <HiLockOpen />
+              </div>
+            </Link>
             {/* <div className="text-sm">
               For more info contact me
               <Link href="/contacts">
@@ -26,13 +28,13 @@ async function Commissions() {
             </div> */}
           </div>
         ) : (
-          <div className="flex flex-row items-center justify-center gap-2 pb-10 pt-2 text-lg opacity-30 lg:text-xl">
+          <div className="flex flex-row items-center justify-center gap-2 opacity-30">
             Commissions closed <HiLockClosed />
           </div>
         )}
       </div>
       <Pricelist prices={pricelist} />
-      <div className="mt-8 w-full">
+      <div className="mt-28 w-full">
         <ReviewSlider reviews={reviews}></ReviewSlider>
       </div>
     </div>
