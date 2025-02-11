@@ -45,7 +45,7 @@ async function Commissions() {
         ""
       )}
 
-      {reviews ? (
+      {false ? (
         <div className="my-8 w-full">
           <ReviewSlider reviews={reviews}></ReviewSlider>
         </div>
