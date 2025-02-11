@@ -20,8 +20,8 @@ export type ProjectsProps = {
 export type CommissionProps = {
   title: string;
   subtitle: string;
-  reviews: ReviewProps[];
-  pricelist: PricesProps[];
+  reviews?: ReviewProps[];
+  pricelist?: PricesProps[];
 };
 
 export type PricesProps = {
@@ -29,12 +29,12 @@ export type PricesProps = {
   price: number;
   description: string;
   currency: string;
-  image_url: string | undefined;
+  image_url?: string | undefined;
   options: string[] | undefined;
 };
 export type ReviewProps = {
   name: string;
   review: string;
   image_url?: string | undefined;
-  avatar_url: string | undefined;
+  avatar_url?: string | undefined;
 };

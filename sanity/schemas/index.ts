@@ -5,6 +5,6 @@ import { price } from "./pricelist";
 import { review } from "./reviews";
 import { commissions } from "./commissions";
 
-const schemas = [artwork, projects, homepage, review, price, commissions];
+const schemas = [homepage, artwork, projects, commissions, review, price];
 
 export default schemas;

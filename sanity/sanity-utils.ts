@@ -3,9 +3,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import { CardData, CommissionProps, ProjectsProps } from "@/types/Content";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { sanityFetch } from "@/app/(sanity)/live";
-import { title } from "process";
-import { subtle } from "crypto";
-import { describe } from "node:test";
 
 const client = createClient({
   projectId: "cly2k8p2",
@@ -32,18 +29,17 @@ export async function getCards(
     `*[_type==$type && category==$category]{title, category, description, year, image}`,
   );
 
-  const { data: events } = await sanityFetch({
-    query: IMG_QUERY,
-    params,
+  const events = await client.fetch(IMG_QUERY, params, {
+    cache: "no-store",
   });
-  // console.log(events);
+  //console.log(events);
 
   const cards = events.map(
     (event: {
       image: SanityImageSource;
-      title: any;
-      description: any;
-      year: any;
+      title: string;
+      description: string;
+      year: string;
     }) => {
       const url = urlImages(event.image, projectId, dataset)?.url();
       const card: CardData = {
@@ -59,7 +55,9 @@ export async function getCards(
 }
 
 export async function getImagesUrl(): Promise<string[]> {
-  const IMG_QUERY = defineQuery(`*[_type=="homepage_imgs"]{category, image}`);
+  const IMG_QUERY = defineQuery(
+    `*[_type=="homepage_imgs"] | order(_updatedAt desc) {category, image}`,
+  );
   const { projectId, dataset } = client.config();
 
   const { data: events } = await sanityFetch({
@@ -112,44 +110,46 @@ export async function getProjects(category: string): Promise<ProjectsProps[]> {
       return card;
     },
   );
-  console.log(cards);
+  // console.log(cards);
 
   return cards;
 }
 export async function getCommissions(): Promise<CommissionProps> {
   const QUERY = defineQuery(
-    `*[_type == "commissions"] {
+    `*[_type == "commissions"] | order(_updatedAt asc) {
   title, subtitle,
   "reviews": reviews[]->{image,name,avatar,review},
   "prices": prices[]->{title,description,price,currency,image,options},
 }`,
   );
-  const { projectId, dataset } = client.config();
-  const { data: events } = await sanityFetch({
-    query: QUERY,
-  });
+  const events = await client.fetch(QUERY, {}, { cache: "no-store" });
 
   //create review and preices object that transforms the img reference into an url
   const newReviews = (reviews: any[]) => {
+    if (!reviews) {
+      return [];
+    }
     const r = reviews.map((obj) => {
       const rev = {
         name: obj.name,
         review: obj.review,
-        // image_url: urlImages(obj.image, projectId, dataset)?.url(),
-        avatar_url: urlImages(obj.avatar, projectId, dataset)?.url(),
+        avatar_url: urlImages(obj.image, projectId, dataset)?.url(),
       };
       return rev;
     });
     return r;
   };
   const newPrices = (prices: any[]) => {
+    if (!prices) {
+      return [];
+    }
     const r = prices.map((obj) => {
       const rev = {
         title: obj.title,
         price: obj.price,
         description: obj.description,
         currency: obj.currency,
-        image_url: urlImages(obj.image, projectId, dataset)?.url(),
+        // image_url: urlImages(obj.image, projectId, dataset)?.url() || "",
         options: obj.options,
       };
       return rev;
@@ -158,6 +158,8 @@ export async function getCommissions(): Promise<CommissionProps> {
   };
 
   const e = events[0];
+  // console.log(e.reviews[0].image);
+
   const commission = {
     title: e.title,
     subtitle: e.subtitle,
@@ -165,7 +167,7 @@ export async function getCommissions(): Promise<CommissionProps> {
     pricelist: newPrices(e.prices),
   };
 
-  console.log(commission);
+  // console.log(commission);
 
   return commission;
 }

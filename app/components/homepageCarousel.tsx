@@ -17,7 +17,14 @@ function HomepageCarousel({ imgs }: { imgs: string[] }) {
     <div className="h-full">
       <Carousel pauseOnHover indicators={false} theme={customTheme}>
         {Object.values(imgs).map((img: StaticImageData | string, index) => (
-          <Image src={img} key={index} alt="..." width={500} height={200} />
+          <Image
+            quality={100}
+            src={img}
+            key={index}
+            alt="..."
+            width={1000}
+            height={1000}
+          />
         ))}
       </Carousel>
     </div>

@@ -12,7 +12,7 @@ async function Commissions() {
 
   return (
     <div className="flex h-full w-full flex-col items-center text-xl text-white">
-      <div className="mb-16 flex flex-col items-center justify-center pt-2 text-lg opacity-100 lg:text-xl">
+      <div className="mb-8 flex flex-col items-center justify-center pt-2 text-lg opacity-100 lg:text-xl">
         {subtitle ? (
           <div className="flex flex-col items-center">
             <Link href={"/contacts"}>
@@ -28,15 +28,30 @@ async function Commissions() {
             </div> */}
           </div>
         ) : (
-          <div className="flex flex-row items-center justify-center gap-2 opacity-30">
+          <div className="flex flex-row items-center justify-center gap-2 text-custom_gray-400">
             Commissions closed <HiLockClosed />
           </div>
         )}
       </div>
       <Pricelist prices={pricelist} />
-      <div className="mt-28 w-full">
-        <ReviewSlider reviews={reviews}></ReviewSlider>
-      </div>
+      {subtitle ? (
+        <div className="mt-8 text-custom_gray-300">
+          For more info or bigger projects contact me{" "}
+          <Link href={"/contacts"} className="hover:text-white">
+            here
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {reviews ? (
+        <div className="my-8 w-full">
+          <ReviewSlider reviews={reviews}></ReviewSlider>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
