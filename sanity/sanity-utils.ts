@@ -41,7 +41,10 @@ export async function getCards(
       description: string;
       year: string;
     }) => {
-      const url = urlImages(event.image, projectId, dataset)?.url();
+      let url: string | undefined;
+      event.image
+        ? (url = urlImages(event.image, projectId, dataset)?.url())
+        : "";
       const card: CardData = {
         title: event.title,
         description: event.description,
@@ -80,23 +83,20 @@ export async function getProjects(category: string): Promise<ProjectsProps[]> {
     `*[_type=="project" && category==$category]{title, description, images}`,
   );
   const { projectId, dataset } = client.config();
-
-  const { data: events } = await sanityFetch({
-    query: IMG_QUERY,
-    params,
-  });
+  const events = await client.fetch(IMG_QUERY, params, { cache: "no-store" });
 
   const cards = events.map(
-    (event: { images: any; title: any; description: any; year: any }) => {
-      const urlImages = (source: SanityImageSource) =>
-        projectId && dataset
-          ? imageUrlBuilder({ projectId, dataset }).image(source)
-          : null;
+    (event: {
+      images: string[];
+      title: string;
+      description: string;
+      year: string;
+    }) => {
       const imgs = event.images;
-      // console.log(imgs);
+      console.log(event);
 
       const url = imgs.map((img: SanityImageSource) => {
-        const url = urlImages(img)?.url();
+        const url = urlImages(img, projectId, dataset)?.url();
         return url;
       });
       // console.log(url);
@@ -133,7 +133,7 @@ export async function getCommissions(): Promise<CommissionProps> {
       const rev = {
         name: obj.name,
         review: obj.review,
-        avatar_url: urlImages(obj.image, projectId, dataset)?.url(),
+        avatar_url: urlImages(obj.avatar, projectId, dataset)?.url(),
       };
       return rev;
     });
@@ -149,7 +149,7 @@ export async function getCommissions(): Promise<CommissionProps> {
         price: obj.price,
         description: obj.description,
         currency: obj.currency,
-        // image_url: urlImages(obj.image, projectId, dataset)?.url() || "",
+        image_url: urlImages(obj.image, projectId, dataset)?.url(),
         options: obj.options,
       };
       return rev;
@@ -158,7 +158,7 @@ export async function getCommissions(): Promise<CommissionProps> {
   };
 
   const e = events[0];
-  // console.log(e.reviews[0].image);
+  // console.log(e.reviews[0].avatar);
 
   const commission = {
     title: e.title,

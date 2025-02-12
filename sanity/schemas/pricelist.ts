@@ -39,6 +39,7 @@ export const price = defineType({
       name: "image",
       type: "image",
       title: "Image",
+      options: { hotspot: true },
     },
   ],
 });

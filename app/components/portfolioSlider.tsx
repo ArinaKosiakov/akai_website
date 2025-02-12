@@ -5,6 +5,7 @@ import { Card } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
 import { CardCarouselProps } from "../../types/Content";
+import temp from "../../public/puppet-awkward.gif";
 
 const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
   const carouselRef: RefObject<HTMLDivElement> = React.useRef(null);
@@ -63,14 +64,23 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
           >
             <Card
               className="border-none"
-              renderImage={() => (
-                <Image
-                  width={300}
-                  height={300}
-                  src={card.src || ""}
-                  alt="image 1"
-                />
-              )}
+              renderImage={() =>
+                card.src ? (
+                  <Image
+                    width={300}
+                    height={300}
+                    src={card.src || ""}
+                    alt="image 1"
+                  />
+                ) : (
+                  <Image
+                    alt="image 1"
+                    width={300}
+                    height={300}
+                    src={{ temp }}
+                  />
+                )
+              }
               href={`/portfolio/${type}/#${index + 1}`}
             >
               {/* <Image src={card.src} alt="image" width={500} height={2500} /> */}

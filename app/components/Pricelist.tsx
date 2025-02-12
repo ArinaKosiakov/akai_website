@@ -5,23 +5,25 @@ import React from "react";
 
 function Pricelist({ prices }: { prices: PricesProps[] }) {
   return (
-    <div className="flex w-full flex-col gap-5 md:w-[60] lg:w-[80%] xl:w-full xl:flex-row">
+    <div className="flex w-full flex-col gap-5 font-karla md:w-[80%] lg:w-[60%] xl:w-full xl:flex-row">
       {prices.map((p, idx) => (
         <Card
           key={idx}
+          imgAlt="Illustration of the possible painting for a given price"
+          imgSrc={p.image_url!}
           className="w-full items-center justify-center xl:max-w-sm"
         >
           <div className="flex h-full flex-col items-center justify-start">
-            <h5 className="mb-4 text-xl font-medium text-custom_gray-500 dark:text-custom_gray-400">
+            <h5 className="mb-4 font-eiko text-lg text-custom_gray-500 dark:text-custom_gray-400 xl:text-sm">
               {p.title}
             </h5>
-            <Image
+            {/* <Image
               alt=""
               height="96"
               src={p.image_url!}
               width="96"
               className="mb-12 shadow-lg"
-            />
+            /> */}
             <div className="flex items-baseline justify-center text-gray-900 dark:text-white">
               <span className="text-3xl font-semibold">{p.currency}</span>
               <span className="text-5xl font-extrabold tracking-tight">
