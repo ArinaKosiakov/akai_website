@@ -22,7 +22,7 @@ async function Display({ type }: DisplayProp) {
           className="w-100% mb-12 flex flex-col items-center md:max-w-[80%]"
         >
           <Image
-            src={image.src!}
+            src={image.src_thumb!}
             alt={""}
             className="h-auto max-w-[100%]"
             width={600}

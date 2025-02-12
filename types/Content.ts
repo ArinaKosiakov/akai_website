@@ -1,7 +1,10 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export type CardData = {
   title: string;
   description: string;
-  src?: string;
+  src?: string[];
+  src_thumb?: string;
   year?: string;
   id?: string;
 };

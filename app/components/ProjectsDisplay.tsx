@@ -45,7 +45,7 @@ function AdvancedCarousel({ type, projects }: CarouselProps) {
           <div className="mt-10 flex h-full w-full items-center justify-center overflow-hidden md:mt-0 lg:w-[65%]">
             <Image
               className="h-full w-auto rounded-lg object-contain"
-              src={card.src[currentIndexes[cardIndex]]} // Use state specific to this card
+              src={card.src![currentIndexes[cardIndex]]} // Use state specific to this card
               alt=""
               width={500}
               height={500}

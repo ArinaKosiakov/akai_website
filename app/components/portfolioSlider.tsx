@@ -67,7 +67,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
                 <Image
                   width={300}
                   height={300}
-                  src={card.src || ""}
+                  src={card.src_thumb!}
                   alt="image 1"
                 />
               )}

@@ -41,15 +41,14 @@ export async function getCards(
       description: string;
       year: string;
     }) => {
-      let url: string | undefined;
-      event.image
-        ? (url = urlImages(event.image, projectId, dataset)?.url())
-        : "";
+      const url: string =
+        urlImages(event.image, projectId, dataset)?.url() || "";
+
       const card: CardData = {
         title: event.title,
         description: event.description,
         year: event.year,
-        src: url,
+        src_thumb: url,
       };
       return card;
     },
@@ -93,10 +92,10 @@ export async function getProjects(category: string): Promise<ProjectsProps[]> {
       year: string;
     }) => {
       const imgs = event.images;
-      console.log(event);
+      // console.log(event);
 
       const url = imgs.map((img: SanityImageSource) => {
-        const url = urlImages(img, projectId, dataset)?.url();
+        const url = urlImages(img, projectId, dataset)?.url() || "";
         return url;
       });
       // console.log(url);
