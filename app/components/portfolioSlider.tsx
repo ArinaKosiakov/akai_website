@@ -69,6 +69,7 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
                   height={300}
                   src={card.src_thumb!}
                   alt="image 1"
+                  quality={100}
                 />
               )}
               href={`/portfolio/${type}/#${index + 1}`}

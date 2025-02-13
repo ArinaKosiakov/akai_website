@@ -47,8 +47,9 @@ function AdvancedCarousel({ type, projects }: CarouselProps) {
               className="h-full w-auto rounded-lg object-contain"
               src={card.src![currentIndexes[cardIndex]]} // Use state specific to this card
               alt=""
-              width={500}
-              height={500}
+              width={800}
+              height={800}
+              quality={100}
             />
           </div>
         </div>

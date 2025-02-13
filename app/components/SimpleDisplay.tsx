@@ -26,7 +26,8 @@ async function Display({ type }: DisplayProp) {
             alt={""}
             className="h-auto max-w-[100%]"
             width={600}
-            height={500}
+            height={600}
+            quality={100}
           ></Image>
           <div className="mt-4 flex w-full flex-row justify-between">
             <span className="text-white text-opacity-70">
