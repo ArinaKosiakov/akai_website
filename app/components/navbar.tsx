@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import logo from "../../public/logo/logo_bianco.png";
+import brush from "../../public/brush.gif";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -24,7 +25,8 @@ function Navbar() {
           <Link href={"/"}>
             <Image width={50} height={50} src={logo} alt="logo of the " />
           </Link>
-        </div>
+        </div>{" "}
+        {/* MOBILE MENU */}
         <section className="MOBILE-MENU flex md:hidden">
           <div
             className="HAMBURGER-ICON space-y-2"
@@ -52,10 +54,11 @@ function Navbar() {
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
-            </div>
+            </div>{" "}
             <ul className="flex min-h-[250px] flex-col items-center justify-between text-white/70">
               <li className="my-8 border-b border-custom_gray-500 uppercase">
                 <a href="/about">About me</a>
+                <Image src={brush} alt="brush" width={100} height={100} />
               </li>
               <li className="my-8 border-b border-custom_gray-500 uppercase">
                 <a href="/portfolio">Portfolio</a>
@@ -66,21 +69,30 @@ function Navbar() {
             </ul>
           </div>
         </section>
-
         {/* links */}
         <div className="xs:hidden sm:hidden md:block">
           <ul className="flex flex-row items-center justify-center text-white text-opacity-70">
             {Links.map((link) => (
               <li
                 key={link.name}
-                className="relative z-10 mx-6 hover:cursor-pointer"
+                className="z-10 mx-6 w-[100px] hover:cursor-pointer"
               >
-                <Link href={link.link} className="relative hover:text-white">
+                <Link
+                  href={link.link}
+                  className="flex flex-col items-center justify-center hover:text-white"
+                >
                   {link.name}
+                  <Image
+                    src={brush}
+                    alt="brush"
+                    className="absolute top-2 z-0"
+                    width={100}
+                    height={100}
+                  />
                 </Link>
-                <span
+                {/* <span
                   className={`"w-full h-full" absolute inset-0 -z-10 ${path === link.link ? "rounded-full bg-white opacity-20 blur-lg" : ""}`}
-                ></span>
+                ></span> */}
               </li>
             ))}
           </ul>
