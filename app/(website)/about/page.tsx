@@ -9,7 +9,7 @@ function AboutMe() {
   return (
     <div className="h-full w-full">
       <div className="flex flex-row items-center justify-around text-white">
-        <div className="flex w-full flex-col items-start lg:w-3/5 lg:pr-10">
+        <div className="flex w-full flex-col items-start md:w-4/5 lg:w-3/5 lg:pr-10">
           <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">
             Hello, I&apos;m <span className="text-akai-500">Akai</span>
           </h1>
@@ -55,7 +55,7 @@ function AboutMe() {
           />
         </div>
       </div>
-      <div className="mb-10 mt-10 h-8">
+      <div className="mt-24 h-8 lg:mb-10 lg:mt-10">
         <MySlider />
       </div>
     </div>

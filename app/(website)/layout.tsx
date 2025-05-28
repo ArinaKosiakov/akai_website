@@ -80,7 +80,7 @@ export default function RootLayout({
       <body className="flex h-[100vh] flex-col bg-custom_gray-700 font-karla font-normal">
         <Navbar />
         <ToastContainer position="top-right" />
-        <div className="mx-auto my-3 h-full w-9/12 flex-1 overflow-y-scroll scrollbar-hide">
+        <div className="mx-auto my-3 h-full w-[90%] flex-1 overflow-y-scroll scrollbar-hide md:w-full lg:w-9/12">
           {children}
         </div>
         <Footer />

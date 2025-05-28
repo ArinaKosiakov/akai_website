@@ -22,7 +22,7 @@ function Navbar() {
     <div className="flex h-20 w-full justify-center align-middle shadow-sm md:mb-10">
       <div className="flex h-full w-10/12 flex-row items-center justify-between">
         {/* logo */}
-        <div className="ml-6">
+        <div className="md:ml-6">
           <Link href={"/"}>
             <Image width={70} height={70} src={logo} alt="logo of the " />
           </Link>
@@ -59,10 +59,12 @@ function Navbar() {
             <ul className="flex min-h-[250px] flex-col items-center justify-between text-white/70">
               <li className="my-8 border-b border-custom_gray-500 uppercase">
                 <a href="/about">About me</a>
-                <Image src={brush} alt="brush" width={100} height={100} />
               </li>
               <li className="my-8 border-b border-custom_gray-500 uppercase">
                 <a href="/portfolio">Portfolio</a>
+              </li>
+              <li className="my-8 border-b border-custom_gray-500 uppercase">
+                <a href="/commissions">Commissions</a>
               </li>
               <li className="my-8 border-b border-custom_gray-500 uppercase">
                 <a href="/contacts">Contacts</a>

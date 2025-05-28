@@ -53,9 +53,11 @@ function Contacts() {
   };
 
   return (
-    <div className="flex w-full flex-col items-center text-white md:flex-row lg:justify-around">
+    <div className="flex w-full flex-col items-center justify-center text-white lg:flex-row lg:justify-around">
       <div className="mt-16 flex w-full flex-col items-start gap-8 md:mt-0 md:w-1/2 md:gap-14 md:pr-8 lg:gap-20 lg:pr-10">
-        <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">CONTACTS</h1>
+        <h1 className="mt-10 font-eiko text-3xl md:mt-0 md:text-4xl lg:text-5xl">
+          CONTACTS
+        </h1>
         <p className="text-l self-stretch font-karla">
           You can get to know me better and see more of my works by visiting the
           links below. <br /> For more information send me a message.
