@@ -23,26 +23,28 @@ function Footer() {
   ];
 
   return (
-    <footer className="flex h-10 w-full items-center justify-around">
-      <div className="flex flex-row">
-        <p className="text-white text-opacity-30">dull.akai</p>
-        <p className="ml-3 text-white text-opacity-30">
-          &copy; {year} Arina Kosiakov
-        </p>
-      </div>
-      <div className="hidden md:block">
-        <ul className="flex flex-row text-white text-opacity-30">
-          {Links.map((link) => (
-            <li
-              className="px-3 hover:cursor-pointer hover:text-white"
-              key={link.name}
-            >
-              <Link target="blank" href={link.link}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <footer className="flex h-10 w-full items-center justify-center">
+      <div className="flex w-9/12 items-center justify-between">
+        <div className="flex flex-row">
+          <p className="text-white text-opacity-30">dull.akai</p>
+          <p className="ml-3 text-white text-opacity-30">
+            &copy; {year} Arina Kosiakov
+          </p>
+        </div>
+        <div className="hidden md:block">
+          <ul className="flex flex-row text-white text-opacity-30">
+            {Links.map((link) => (
+              <li
+                className="px-3 hover:cursor-pointer hover:text-white"
+                key={link.name}
+              >
+                <Link target="blank" href={link.link}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

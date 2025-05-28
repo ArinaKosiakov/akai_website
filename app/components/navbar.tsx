@@ -2,9 +2,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import logo from "../../public/logo/logo_bianco.png";
-import brush from "../../public/brush.gif";
+import brush from "../../public/brush.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 
 function Navbar() {
   let Links = [
@@ -18,12 +19,12 @@ function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="flex h-20 w-full justify-center align-middle shadow-sm">
-      <div className="flex h-full w-9/12 flex-row items-center justify-between">
+    <div className="flex h-20 w-full justify-center align-middle shadow-sm md:mb-10">
+      <div className="flex h-full w-10/12 flex-row items-center justify-between">
         {/* logo */}
         <div className="ml-6">
           <Link href={"/"}>
-            <Image width={50} height={50} src={logo} alt="logo of the " />
+            <Image width={70} height={70} src={logo} alt="logo of the " />
           </Link>
         </div>{" "}
         {/* MOBILE MENU */}
@@ -79,20 +80,30 @@ function Navbar() {
               >
                 <Link
                   href={link.link}
-                  className="flex flex-col items-center justify-center hover:text-white"
+                  className="group flex flex-col items-center justify-center hover:text-white"
                 >
                   {link.name}
+                  <motion.div
+                    className="absolute top-0"
+                    initial={{ opacity: 0 }}
+                    whileHover={{
+                      opacity: 1,
+                      transition: {
+                        duration: 0.6,
+                        ease: "easeIn",
+                      },
+                    }}
+                  >
+                    <Image src={brush} alt="brush" width={110} height={100} />
+                  </motion.div>
                   <Image
                     src={brush}
                     alt="brush"
-                    className="absolute top-2 z-0"
-                    width={100}
+                    width={110}
                     height={100}
+                    className={`absolute top-0 ${path === link.link ? "block" : "hidden"}`}
                   />
                 </Link>
-                {/* <span
-                  className={`"w-full h-full" absolute inset-0 -z-10 ${path === link.link ? "rounded-full bg-white opacity-20 blur-lg" : ""}`}
-                ></span> */}
               </li>
             ))}
           </ul>

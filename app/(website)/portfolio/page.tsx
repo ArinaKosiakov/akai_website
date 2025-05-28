@@ -14,7 +14,7 @@ async function Portfolio() {
   // const cards = await getCards("artwork", "illustration");
 
   return (
-    <div className="flex h-full flex-col justify-center px-[5%]">
+    <div className="flex h-full flex-col justify-center">
       <div className="mb-24">
         <Link href={"/portfolio/projects"}>
           <div className="mb-6 flex items-center font-eiko">

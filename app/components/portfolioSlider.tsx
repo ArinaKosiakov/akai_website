@@ -59,14 +59,14 @@ const CardCarousel: FC<CardCarouselProps> = ({ type, cards }) => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="min-w-[150px] md:min-w-[200px] lg:min-w-[300px]"
+            className="min-w-[150px] md:min-w-[200px] lg:min-h-[376px] lg:min-w-[300px]"
           >
             <Card
-              className="border-none"
+              className="h-full border-none"
               renderImage={() => (
                 <Image
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
                   src={card.src_thumb!}
                   alt="image 1"
                   quality={100}

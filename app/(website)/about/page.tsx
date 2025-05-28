@@ -7,7 +7,7 @@ import MySlider from "@/app/components/SkillSlider";
 
 function AboutMe() {
   return (
-    <div className="h-full w-full pl-[5%]">
+    <div className="h-full w-full">
       <div className="flex flex-row items-center justify-around text-white">
         <div className="flex w-full flex-col items-start lg:w-3/5 lg:pr-10">
           <h1 className="font-eiko text-3xl md:text-4xl lg:text-5xl">
