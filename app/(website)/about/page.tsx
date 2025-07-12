@@ -33,12 +33,15 @@ function AboutMe() {
             It has always been my biggest passion and finally now I can share my
             works with other people.
           </p>
-          <div className="mt-10 w-full">
+          <div className="mt-24 h-8 max-w-[100%] lg:mb-10 lg:mt-10">
+            <MySlider />
+          </div>
+          {/* <div className="mt-10 w-full">
             <h2 className="pd-10 font-eiko text-lg lg:text-2xl">
               My latest achievements
             </h2>
             <HorizontalTimeline styles={""} />
-          </div>
+          </div> */}
         </div>
         <div className="relative hidden w-2/5 items-center lg:flex lg:justify-center">
           <Image
@@ -55,9 +58,9 @@ function AboutMe() {
           />
         </div>
       </div>
-      <div className="mt-24 h-8 lg:mb-10 lg:mt-10">
+      {/* <div className="mt-24 h-8 lg:mb-10 lg:mt-10">
         <MySlider />
-      </div>
+      </div> */}
     </div>
   );
 }
