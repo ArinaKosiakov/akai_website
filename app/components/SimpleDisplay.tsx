@@ -9,9 +9,25 @@ type DisplayProp = {
 };
 
 async function Display({ type }: DisplayProp) {
-  //const images = type === "sketchbook" ? sketches : illustrations;
-  const category = type === "sketchbook" ? "sketch" : "illustration";
-  const images = await getCards("artwork", `${category}`);
+  // Map the new portfolio categories to the correct data categories
+  let dataCategory: string;
+  let dataType: string;
+
+  switch (type) {
+    case "sketchbook":
+      dataCategory = "sketch";
+      dataType = "artwork";
+      break;
+    case "personal-work":
+      dataCategory = "illustration";
+      dataType = "artwork";
+      break;
+    default:
+      dataCategory = "sketch";
+      dataType = "artwork";
+  }
+
+  const images = await getCards(dataType, dataCategory);
 
   return (
     <div className="flex h-full flex-col items-center text-sm md:text-xl">

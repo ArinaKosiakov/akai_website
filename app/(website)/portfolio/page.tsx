@@ -1,55 +1,46 @@
 import React from "react";
-import Link from "next/link";
-import CardCarousel from "@/app/components/portfolioSlider";
-import { FaArrowRight } from "react-icons/fa";
-
-import src from "../../../public/homepage_imgs/img1.jpg";
+import PortfolioPanel from "@/app/components/portfolioPanel";
 import { getCards } from "@/sanity/sanity-utils";
 
 async function Portfolio() {
-  const projectCards = await getCards("project", "project");
-  const envCards = await getCards("project", "environment");
-  const sketchesCards = await getCards("artwork", "sketch");
-  const illCards = await getCards("artwork", "illustration");
-  // const cards = await getCards("artwork", "illustration");
+  const sketchbookCards = await getCards("artwork", "sketch");
+  const personalWorkCards = await getCards("artwork", "illustration");
+  const commissionsCards = await getCards("project", "project");
+  const booksCards = await getCards("project", "environment"); // You may need to create a new schema for books
 
   return (
-    <div className="flex h-full flex-col justify-center">
-      <div className="mb-24">
-        <Link href={"/portfolio/projects"}>
-          <div className="mb-6 flex items-center font-eiko">
-            <span className="mr-3 text-2xl">Projects</span>
-            <FaArrowRight className="mt-[2px]" />
-          </div>
-        </Link>
-        <CardCarousel type="projects" cards={projectCards} />
-      </div>
-      <div className="mb-24">
-        <Link href={"/portfolio/environments"}>
-          <div className="mb-6 flex items-center font-eiko">
-            <span className="mr-3 text-2xl">Environments</span>
-            <FaArrowRight className="mt-[2px]" />
-          </div>
-        </Link>
-        <CardCarousel type="environments" cards={envCards} />
-      </div>
-      <div className="mb-24">
-        <Link href={"/portfolio/sketchbook"}>
-          <div className="mb-6 flex items-center font-eiko">
-            <span className="mr-3 text-2xl">Sketchbook</span>
-            <FaArrowRight className="mt-[2px]" />
-          </div>
-        </Link>
-        <CardCarousel type="sketchbook" cards={sketchesCards} />
-      </div>
-      <div className="mb-24">
-        <Link href={"/portfolio/illustrations"}>
-          <div className="mb-6 flex items-center font-eiko">
-            <span className="mr-3 text-2xl">Illustrations</span>
-            <FaArrowRight className="mt-[2px]" />
-          </div>
-        </Link>
-        <CardCarousel type="illustrations" cards={illCards} />
+    <div className="container mx-auto px-4 py-8">
+      {/* Portfolio Header
+      <div className="mb-16 text-center">
+        <h1 className="mb-4 font-eiko text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
+          Portfolio
+        </h1>
+        <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+          Explore my creative works across different mediums and styles
+        </p>
+      </div> */}
+
+      {/* Portfolio Sections */}
+      <div className="space-y-8">
+        <PortfolioPanel
+          type="sketchbook"
+          cards={sketchbookCards}
+          title="Sketchbook"
+        />
+
+        <PortfolioPanel
+          type="personal-work"
+          cards={personalWorkCards}
+          title="Personal Work"
+        />
+
+        <PortfolioPanel
+          type="commissions"
+          cards={commissionsCards}
+          title="Commissions"
+        />
+
+        <PortfolioPanel type="my-books" cards={booksCards} title="My Books" />
       </div>
     </div>
   );

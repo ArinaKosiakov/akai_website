@@ -23,7 +23,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="flex h-10 w-full items-center justify-center">
+    <footer className="mb-2 flex h-10 w-full items-center justify-center">
       <div className="flex w-9/12 items-center justify-between">
         <div className="flex flex-row">
           <p className="text-white text-opacity-30">dull.akai</p>

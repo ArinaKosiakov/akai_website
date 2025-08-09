@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const slugs = ["environments", "illustrations", "sketchbook", "projects"];
+  const slugs = ["sketchbook", "personal-work", "commissions", "my-books"];
 
   return slugs.map((slug) => ({
     slug,
@@ -15,24 +15,28 @@ export async function generateStaticParams() {
 
 const pages = [
   {
-    slug: "environments",
-    type: "environment",
-    title: "Environments",
-  },
-  {
     slug: "sketchbook",
-    type: "sketchbook",
+    type: "sketch",
     title: "Sketchbook",
+    dataType: "artwork",
   },
   {
-    slug: "projects",
-    type: "project",
-    title: "Projects",
-  },
-  {
-    slug: "illustrations",
+    slug: "personal-work",
     type: "illustration",
-    title: "Illustrations",
+    title: "Personal Work",
+    dataType: "artwork",
+  },
+  {
+    slug: "commissions",
+    type: "project",
+    title: "Commissions",
+    dataType: "project",
+  },
+  {
+    slug: "my-books",
+    type: "environment", // You may need to create a new category for books
+    title: "My Books",
+    dataType: "project",
   },
 ];
 
@@ -44,25 +48,33 @@ interface PageProps {
 
 export default async function PortfolioPage(props: PageProps) {
   const { params } = props;
-  let isTrue: boolean;
 
   const data = pages.find((page) => page.slug === params.slug);
-  // console.log(data);
 
   if (!data) {
     return notFound();
   }
-  params.slug === "projects" || params.slug === "environments"
-    ? (isTrue = true)
-    : (isTrue = false);
 
-  const projects = await getProjects(
-    params.slug === "projects" ? "project" : "environment",
-  );
+  // Use AdvancedCarousel for project-based categories, Display for artwork-based
+  const useAdvancedCarousel = data.dataType === "project";
+
+  let projects = [];
+  if (useAdvancedCarousel) {
+    projects = await getProjects(data.type);
+  }
 
   return (
-    <div>
-      {isTrue ? (
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-12 text-center">
+        <h1 className="mb-4 font-eiko text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
+          {data.title}
+        </h1>
+      </div>
+      <div>
+        <Display type={params.slug} />
+      </div>
+
+      {/* {useAdvancedCarousel ? (
         <div>
           <AdvancedCarousel type={params.slug} projects={projects} />
         </div>
@@ -70,7 +82,7 @@ export default async function PortfolioPage(props: PageProps) {
         <div>
           <Display type={params.slug} />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
